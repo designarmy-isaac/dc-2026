@@ -1,0 +1,57 @@
+/* ===================================
+====================================== TYPOGRAPHY HELPER CLASSES
+=================================== */
+
+.body-font-family {
+  font-family: $body-font-family;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  text-transform: uppercase;
+}
+
+h3, .h3 {
+  text-align: center;
+  @include breakpoint(large) {
+    text-align: left;
+  }
+}
+
+h5, .h5, h6, .h6 {
+  font-family: $body-font-family;
+  text-transform: none;
+}
+
+.lead {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  & .subheader {
+    font-size: rem-calc(26);
+    @include breakpoint(medium) {
+      font-size: rem-calc(45);
+    }
+  }
+}
+
+
+/* ===================================
+====================================== COLOR AND STYLE
+=================================== */
+
+
+.button {
+  transition: all 0.25s ease-out;
+}
