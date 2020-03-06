@@ -111,20 +111,11 @@ body {
   display: none;
 }
 
-@include breakpoint(medium) {
-  .tab-control-container {
-    justify-content: space-around;
-  }
-}
-
 @include breakpoint(large) {
   .tab-control-container {
     display: block;
   }
-  .tab-arrow {
-    display: none;
-  }
-  
+
   .tab-control.inactive {
     font-size: 1.5rem;
     display: block;
