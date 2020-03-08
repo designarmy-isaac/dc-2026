@@ -59,24 +59,18 @@
         <img src="{{root}}assets/img/DC2026-Eddie_Pope_silhouette-sm.png" alt="{{ intro-athlete-image-alt }}" id="hero-graphic-silhouette">
         <img src="{{root}}assets/img/DC2026-Eddie_Pope-sm.png" alt="" id="hero-graphic-athlete">
         <img src="{{root}}assets/img/DC2026-header_banner-sm.png" alt="United by the Game" id="hero-graphic-banner">
-      </div>
-    </section>
-    
-    
-    <nav class="grid-container p-t-1" data-aos="fade">
-      <div class="grid-x grid-padding-x">
-        <div class="cell small-12">
+        <nav>
           {{#ifequal lang "en"}}
             <strong class="button">EN</strong> <a href="{{root}}/es/" class="button">ES</a>
           {{/ifequal}}
           {{#ifequal lang "es"}}
              <a href="{{root}}" class="button">EN</a> <strong class="button">ES</strong>
           {{/ifequal}}
-        </div>
-        <div class="cell small-6 text-right">
-        </div>
+        </nav>
       </div>
-    </nav>
+    </section>
+    
+    
     
     <div class="signup-banner"><a href="_signup.html" rel="modal:open" class="button secondary large" >{{cta}}</a></div>
 
@@ -249,16 +243,16 @@
               <h2 class="header-group h1 p-b-3">{{ share-header }}<br><span class="subheader">{{ share-hashtag }}</span></h2>
             </div>
             <div class="cell small-6">
-              <i class="share-cta-icon">f</i><a href="#" class="share-cta" id="cta-facebook" data-share-channel="facebook">{{share-cta-facebook}}</a><br>
-              <i class="share-cta-icon">t</i><a href="#" class="share-cta" id="cta-twitter" data-share-channel="twitter">{{share-cta-twitter}}</a><br>
-              <i class="share-cta-icon">i</i><a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram">{{share-cta-instagram}}</a><br>
-              <i class="share-cta-icon">w</i><a href="#" class="share-cta" id="cta-whatsapp" data-share-channel="whatsapp">{{share-cta-whatsapp}}</a>
+              <a href="#" class="share-cta" id="cta-facebook" data-share-channel="facebook"><i class="share-cta-icon fab fa-facebook-f"></i>{{share-cta-facebook}}</a><br>
+              <a href="#" class="share-cta" id="cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
+              <a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>
+             <a href="#" class="share-cta" id="cta-whatsapp" data-share-channel="whatsapp"> <i class="share-cta-icon fab fa-whatsapp"></i>{{share-cta-whatsapp}}</a>
             </div>
             <div class="cell small-6">
-              <i class="share-cta-icon">in</i><a href="#" class="share-cta" id="cta-linkedin" data-share-channel="linkedin">{{share-cta-linkedin}}</a><br>
-              <i class="share-cta-icon">m</i><a href="#" class="share-cta" id="cta-messenger" data-share-channel="messenger">{{share-cta-messenger}}</a><br>
-              <i class="share-cta-icon">sms</i><a href="#" class="share-cta" id="cta-sms" data-share-channel="sms">{{share-cta-sms}}</a><br>
-              <i class="share-cta-icon">e</i><a href="#" class="share-cta" id="cta-email" data-share-channel="email">{{share-cta-email}}</a>
+              <a href="#" class="share-cta" id="cta-linkedin" data-share-channel="linkedin"><i class="share-cta-icon fab fa-linkedin"></i>{{share-cta-linkedin}}</a><br>
+              <a href="#" class="share-cta" id="cta-messenger" data-share-channel="messenger"><i class="share-cta-icon fab fa-facebook-messenger"></i>{{share-cta-messenger}}</a><br>
+              <a href="#" class="share-cta" id="cta-sms" data-share-channel="sms"><i class="share-cta-icon far fa-comment"></i>{{share-cta-sms}}</a><br>
+              <a href="#" class="share-cta" id="cta-email" data-share-channel="email"><i class="share-cta-icon far fa-envelope"></i>{{share-cta-email}}</a>
             </div>
           </div>
         </div>
@@ -268,28 +262,27 @@
     <section id="section-media" class="grid-container">
       <div class="grid-x m-b-8">
         <div class="cell small-12 medium-7 large-5">
-          <h2>{{follow-header}}</h2>
+          <h2 class="h1">{{follow-header}}</h2>
           <p>{{follow-paragraph}}</p>
           <div>
-            <a href="#TODO" class="follow-button">f</a>
-            <a href="#TODO" class="follow-button">t</a>
-            <a href="#TODO" class="follow-button">i</a>
-            <a href="#TODO" class="follow-button">y</a>
-            <a href="#TODO" class="follow-button">s</a>
-            <a href="#TODO" class="follow-button">t</a>
+            <a href="#TODO" class="follow-button"><i class="follow-icon fab fa-facebook-f"></i></a>
+            <a href="#TODO" class="follow-button"><i class="follow-icon fab fa-twitter"></i></a>
+            <a href="#TODO" class="follow-button"><i class="follow-icon fab fa-instagram"></i></a>
+            <a href="#TODO" class="follow-button"><i class="follow-icon fab fa-youtube"></i></a>
+            <a href="#TODO" class="follow-button"><i class="follow-icon fab fa-snapchat-ghost"></i></a>
           </div>
         </div>
       </div>
       <div class="grid-x m-b-8">
         <div class="cell small-12 medium-7 large-5">
-          <h2>{{contact-header}}</h2>
+          <h2 class="h1">{{contact-header}}</h2>
           <p>{{contact-paragraph}}</p>
           <a href="_contact.html" rel="modal:open" class="button success large">{{contact-button}}</a>
         </div>
       </div>
       <div class="grid-x m-b-2">
         <div class="cell small-12 medium-7 large-5">
-          <h2>{{media-header}}</h2>
+          <h2 class="h1">{{media-header}}</h2>
           <p>{{media-paragraph}}</p>
         </div>
       </div>
@@ -314,14 +307,14 @@
             <img alt="{{download-fact-sheet-img-alt}}" src="https://placehold.it/350x500">
             <h3 class="h5">{{download-fact-sheet}}</h3>
             <p>
-              <a href="#TODO">{{download-label}} .pdf</a>
+              <a href="#TODO">{{download-label}} PDF</a>
             </p>
           </div>
           <div class="download">
             <img alt="{{download-press-release-img-alt}}" src="https://placehold.it/350x500">
             <h3 class="h5">{{download-press-release}}</h3>
             <p>
-              <a href="#TODO">{{download-label}} .pdf</a>
+              <a href="#TODO">{{download-label}} PDF</a>
             </p>
           </div>
         </div>
@@ -330,34 +323,228 @@
     
     <section id="section-board" class="p-t-4 p-b-4">
       <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-          <div class="cell small-12 large-5">
-            <h2>{{board-header}}</h2>
+        <div class="grid-x">
+          <div class="cell small-8 large-5">
+            <h2 class="h1 m-b-2">{{board-header}}</h2>
+          </div>
+          <div class="cell small-12">
+            <div class="grid-x grid-margin-x">
+              <div class="cell small-6 member-container">
+                <p class="member-title-large">Mayor</p>
+                <p class="member-name-large">Muriel Bowser</p>
+                <p class="member-org-large">Washington, DC</p>
+              </div>
+              <div class="cell small-6 member-container">
+                <p class="member-title-large">Co-Chair</p>
+                <p class="member-name-large">Max Brown</p>
+                <p class="member-org-large">Events DC</p>
+              </div>
+              <div class="cell small-6 member-container">
+                <p class="member-title-large">Co-Chair</p>
+                <p class="member-name-large">Mark Ein</p>
+                <p class="member-org-large">Capitol Investment Corp. IV</p>
+              </div>
+              <div class="cell small-6 member-container">
+                <p class="member-title-large">Honorary Chair</p>
+                <p class="member-name-large">Gina Adams</p>
+                <p class="member-org-large">FedEx Corporation</p>
+              </div>
+              <div class="cell small-6 member-container">
+                <p class="member-title-large">Honorary Chair</p>
+                <p class="member-name-large">Ted Leonsis</p>
+                <p class="member-org-large">Monumental Sports &amp; Entertainment</p>
+              </div>
+              <div class="cell small-6 member-container">
+                <p class="member-title-large">Host Team</p>
+                <p class="member-name-large">Jason Levien</p>
+                <p class="member-org-large">D.C. United</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-12">
+            <div class="grid-x grid-margin-x">
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Yousef Al Otaiba</p>
+                <p class="member-org">United Arab Emirates</p>
+              </div>              
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Pedro Alfonso</p>
+                <p class="member-org">Dynamic Concepts, Inc.</p>
+              </div>              
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose Andres</p>
+                <p class="member-org">World Central Kitchen</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container">
+                <p class="member-name">Jose</p>
+                <p class="member-org">World</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     
        
-    <footer class="grid-container p-t-6">
+    <footer class="grid-container p-t-5 p-b-6">
       <div class="grid-x grid-padding-x">
-        <div class="cell small-12 large-5">
-          <h2 class="m-b-6">{{footer-header}}</h2>
+        <div class="cell small-8 large-5">
+          <h2 class="h1 m-b-5">{{footer-header}}</h2>
         </div>
       </div>
-      <div class="grid-x grid-padding-x">
+      <div class="grid-x grid-margin-x m-b-4">
         {{#repeat 12}}
           <div class="cell small-3 large-2 m-b-2">
             <img src="//placehold.it/300x300">
           </div>
         {{/repeat}}
+      </div>
+      <div class="grid-x">
+        <div class="cell small-3 m-b-2">
+          <img src="{{root}}assets/img/DC2026-United2026_Logo.png" alt="{{united2026-logo-alt}}">
+        </div>
+        <div class="cell small-3 m-b-2">
+          <img src="{{root}}assets/img/DC2026-CA_Soccer_Logo.png" alt="{{canada-logo-alt}}">
+        </div>
+        <div class="cell small-3 m-b-2">
+          <img src="{{root}}assets/img/DC2026-MX_Soccer_Logo.png" alt="{{mexico-logo-alt}}">
+        </div>
+        <div class="cell small-3 m-b-2">
+          <img src="{{root}}assets/img/DC2026-US_Soccer_Logo.png" alt="{{us-soccer-logo-alt}}">
+        </div>
+        <div class="cell small-4 small-offset-4 m-b-2">
+          <img src="{{root}}assets/img/DC2026-Events_DC_Logo.png" alt="{{us-soccer-logo-alt}}" class="float-center">
+        </div>
         <div class="cell small-12">
-          <div class="cell small-12 m-b-2">
-          {{#repeat 4}}
-            <img src="//placehold.it/160x40" class="p-r-1">
-          {{/repeat}}
-            <img src="//placehold.it/160x40" class="float-right">
-          </div>
+          <p class="text-center">{{copyright}} &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; {{privacy-policy}}</p>
         </div>
       </div>
     </footer>

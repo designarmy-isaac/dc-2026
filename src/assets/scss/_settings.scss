@@ -136,7 +136,7 @@ $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1;
+$header-lineheight: (55/63);
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
@@ -148,11 +148,11 @@ $header-styles: (
     'h6': ('font-size': 15),
   ),
   medium: (
-    'h1': ('font-size': 64),
-    'h2': ('font-size': 64),
-    'h3': ('font-size': 36),
-    'h4': ('font-size': 24),
-    'h5': ('font-size': 18),
+    'h1': ('font-size': 65),
+    'h2': ('font-size': 39),
+    'h3': ('font-size': 16),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
   large: (
@@ -288,7 +288,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: $header-font-family;
-$button-padding: 0.15em 1.25em;
+$button-padding: 0.15em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -423,21 +423,21 @@ $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(18 0);
 $legend-padding: rem-calc(0 3);
 $form-spacing: rem-calc(16);
-$helptext-color: $black;
+$helptext-color: $primary-color;
 $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
-$input-prefix-color: $black;
+$input-prefix-color: $primary-color;
 $input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-border: 1px solid $primary-color;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
+$form-label-color: $primary-color;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
-$select-triangle-color: $dark-gray;
+$select-triangle-color: $primary-color;
 $select-radius: $global-radius;
-$input-color: $black;
+$input-color: $primary-color;
 $input-placeholder-color: $medium-gray;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
@@ -462,7 +462,7 @@ $form-button-radius: $global-radius;
 
 $label-background: $primary-color;
 $label-color: $white;
-$label-color-alt: $black;
+$label-color-alt: $primary-color;
 $label-palette: $foundation-palette;
 $label-font-size: 0.8rem;
 $label-padding: 0.33333rem 0.5rem;
