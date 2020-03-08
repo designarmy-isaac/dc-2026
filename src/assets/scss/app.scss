@@ -1,5 +1,11 @@
 @charset 'utf-8';
 
+@font-face {
+  font-family: 'Aveny T';
+  src:  url('../webfont/Aveny-TPRO-BoldWEB.woff2') format('woff2'),
+    url('../webfont/Aveny-TPRO-BoldWEB.woff') format('woff');
+}
+
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -70,3 +76,4 @@
 
 @import 'components/modal';
 @import 'components/form'
+
