@@ -75,3 +75,47 @@ h2 {
 .button {
   transition: all 0.25s ease-out;
 }
+
+
+/* ===================================
+====================================== SHARE
+=================================== */
+
+i {
+  font-size: rem-calc(24px);
+  text-align: center;
+  position: relative;
+  top: 2px;
+}
+
+
+/* ===================================
+====================================== ADVISORY BOARD
+=================================== */
+
+.member-title,
+.member-name,
+.member-org,
+.member-name-large,
+.member-org-large {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 1.15;
+}
+
+.member-title-large {
+  font-weight: bold;
+}
+
+.member-name-large {
+  font-size: rem-calc(22px);
+  font-weight: bold;
+}
+
+.member-name {
+  font-weight: bold;
+}
+
+.member-org {
+  font-size: rem-calc(13px)
+}
