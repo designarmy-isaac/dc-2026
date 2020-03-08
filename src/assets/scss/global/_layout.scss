@@ -217,7 +217,7 @@ body {
 
 .highlight-box {
   @include box-3d($success-color);
-  padding: 5%;
+  padding: 3rem 2rem 2rem;
   background: $white;
   border-radius: $global-radius;
   color: $primary-color;
