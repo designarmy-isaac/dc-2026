@@ -80,10 +80,9 @@
     
     <div class="signup-banner"><a href="_signup.html" rel="modal:open" class="button secondary large" >{{cta}}</a></div>
 
-    <section class="grid-container p-t-6 p-b-6" id="section-intro">
+    <section class="grid-container p-b-2" id="section-intro">
       <div class="grid-x grid-padding-x">
         <div class="cell small-12 medium-7 medium-offset-3 large-offset-4" data-aos="fade">
-          <h1 class="h2 p-b-1">{{ headline }}</h1>
           <p class="lead">{{ intro-paragraph }}</p>
         </div>
       </div>
@@ -91,32 +90,36 @@
     
     <section class="grid-container hide-for-large" id="section-tabs">
       <div class="grid-x grid-padding-x">
-        <div class="cell small-12 medium-6">
-          <h2>{{tabs-header}}<br><span class="subheader">{{tab1-header}}</span></h2>
+        <div class="cell small-12 medium-6 p-b-3">
+          <h2 class="header-group h1">{{tabs-header}}</h2>
+          <h3 class="header-group h2">{{tab1-header}}</h3>
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
             <img alt="{{tab1-image-alt}}"  src="{{root}}assets/img/DC2026-Real_Madrid_vs_Juventus_Field-sm.jpg">
           </picture>
           <p>{{#markdown}}{{tab1-content}}{{/markdown}}</p>
         </div>
-        <div class="cell small-12 medium-6">
-          <h2>{{tabs-header}}<br><span class="subheader">{{tab2-header}}</span></h2>
+        <div class="cell small-12 medium-6 p-b-3">
+          <h2 class="header-group h1">{{tabs-header}}</h2>
+          <h3 class="header-group h2">{{tab2-header}}</h3>
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
             <img alt="{{tab2-image-alt}}" src="{{root}}assets/img/DC2026-Nation_Flags_at_the_Kennedy_Center-sm.jpg">
           </picture>
           <p>{{#markdown}}{{tab2-content}}{{/markdown}}</p>
         </div>
-        <div class="cell small-12 medium-6">          
-          <h2>{{tabs-header}}<br><span class="subheader">{{tab3-header}}</span></h2>
+        <div class="cell small-12 medium-6 p-b-3">          
+          <h2 class="header-group h1">{{tabs-header}}</h2>
+          <h3 class="header-group h2">{{tab3-header}}</h3>
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
             <img alt="{{tab3-image-alt}}" src="{{root}}assets/img/DC2026-The_National_Mall-sm.jpg">
           </picture>
           <p>{{#markdown}}{{tab3-content}}{{/markdown}}</p>
         </div>
-        <div class="cell small-12 medium-6">          
-          <h2>{{tabs-header}}<br><span class="subheader">{{tab4-header}}</span></h2>
+        <div class="cell small-12 medium-6 p-b-3">          
+          <h2 class="header-group h1">{{tabs-header}}</h2>
+          <h3 class="header-group h2">{{tab4-header}}</h3>
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
             <img alt="{{tab4-image-alt}}" src="{{root}}assets/img/DC2026-Cyclists_near_The_Capitol-sm.jpg">
@@ -174,20 +177,18 @@
       </div>
     </section>
     
-    <section class="grid-container" id="section-highlight">
+    <section class="grid-container m-t-3" id="section-highlight">
       <div class="grid-x">
         <div class="cell small-12 large-5">
           <div class="highlight-box">
-            <h2>{{pledge-header}}<br><span class="subheader">{{pledge-subheader}}</span></h2>
-            <p>{{pledge-paragraph}}</p>
-            <a href="_signup.html" rel="modal:open" class="button large">{{pledge-button}}</a>
+            <h2 class="header-group h1 p-b-3">{{pledge-header}}<br><span class="subheader">{{pledge-subheader}}</span></h2>
+            <a href="_signup.html" rel="modal:open" class="button success large">{{pledge-button}}</a>
           </div>
         </div>
         <div class="cell small-12 large-5 large-offset-1">
           <div class="highlight-box m-t-5">
-            <h2>{{volunteer-header}}<br><span class="subheader">{{volunteer-subheader}}</span></h2>
-            <p>{{volunteer-paragraph}}</p>
-            <a href="_signup.html" rel="modal:open" class="button large">{{volunteer-button}}</a>
+            <h2 class="header-group h1 p-b-3">{{volunteer-header}}<br><span class="subheader">{{volunteer-subheader}}</span></h2>
+            <a href="_signup.html" rel="modal:open" class="button success large">{{volunteer-button}}</a>
           </div>
         </div>
       </div>
@@ -245,7 +246,7 @@
         <div class="cell small-12 medium-6 medium-offset-1 large-4">
           <div class="grid-x">
             <div class="cell small-12">
-              <h2>{{share-header}}</h2>
+              <h2 class="header-group h1 p-b-3">{{ share-header }}<br><span class="subheader">{{ share-hashtag }}</span></h2>
             </div>
             <div class="cell small-6">
               <i class="share-cta-icon">f</i><a href="#" class="share-cta" id="cta-facebook" data-share-channel="facebook">{{share-cta-facebook}}</a><br>

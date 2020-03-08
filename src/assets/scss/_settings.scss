@@ -140,12 +140,12 @@ $header-lineheight: 1;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 50),
-    'h2': ('font-size': 36),
-    'h3': ('font-size': 26),
-    'h4': ('font-size': 23),
-    'h5': ('font-size': 18),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 65),
+    'h2': ('font-size': 39),
+    'h3': ('font-size': 15),
+    'h4': ('font-size': 15),
+    'h5': ('font-size': 15),
+    'h6': ('font-size': 15),
   ),
   medium: (
     'h1': ('font-size': 64),
@@ -208,7 +208,7 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: rem-calc(26px);
+$lead-font-size: rem-calc(18px);
 $lead-lineheight: 100% * 30 / 26;
 $subheader-lineheight: 0.55;
 $subheader-color: inherit;
@@ -288,7 +288,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: $header-font-family;
-$button-padding: 0.85em 1.5em;
+$button-padding: 0.15em 1.25em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -301,7 +301,7 @@ $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
   default: 100%,
-  large: 1.25rem,
+  large: rem-calc(36px),
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0;

@@ -23,25 +23,37 @@ h1,
 h2,
 .h2,
 h3,
-.h3 {
+.h3, h4, .h4, h5, .h5, h6, .h6 {
   text-transform: uppercase;
 }
 
-h3, .h3 {
-  text-align: center;
-  @include breakpoint(large) {
-    text-align: left;
-  }
+.h1 .subheader {
+  @extend .h2;
+  line-height: rem-calc(33px);
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-h5, .h5, h6, .h6 {
+h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: $body-font-family;
+  font-weight: bold;
   text-transform: none;
+}
+
+.header-group {
+  line-height: rem-calc(33px);
+}
+
+h3.header-group {
+  padding-bottom: 1rem;
 }
 
 .lead {
   text-transform: uppercase;
   font-weight: bold;
+  @include breakpoint(medium) {
+    font-size: rem-calc(26px);
+  }
 }
 
 h2 {
