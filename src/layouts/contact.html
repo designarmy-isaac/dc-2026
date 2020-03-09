@@ -2,8 +2,14 @@
   <h2>{{contact-modal-header}}</h2>
   <p>{{contact-modal-paragraph}}</p>
   <form>
-    <label>{{contact-modal-email-label}}<input type="email"></label>
-    <label>{{contact-modal-email-subject}}<input type="select"></label>
-    <label>{{contact-modal-message}}<input type="text"></label>
+    <label>{{email-label}}<input type="email"></label>
+    <label>{{email-subject-label}}
+      <select>
+        {{#each email-subjects}}
+        <option value="{{ this }}">{{ this }}</option>
+        {{/each}}
+      </select>
+    </label>
+    <label>{{message-label}}<input type="text"></label>
   </form>
 </div>
