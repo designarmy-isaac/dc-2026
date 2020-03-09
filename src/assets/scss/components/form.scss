@@ -14,8 +14,8 @@
 }
 
 input[type=email],
-input[type=text]
-{
+input[type=text],
+select {
   border: 1px solid $primary-color;
   border-radius: 2px;
   outline: none;
