@@ -73,7 +73,7 @@ $foundation-palette: (
   secondary: #eb1919,
   success: #23418c,
   warning: #0089cf,
-  alert: #ffd300,
+  alert: #eb1919,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -222,9 +222,9 @@ $stat-font-size: 2.5rem;
 
 $abide-inputs: true;
 $abide-labels: true;
-$input-background-invalid: get-color(alert);
-$form-label-color-invalid: get-color(alert);
-$input-error-color: get-color(alert);
+$input-background-invalid: #eb1919;
+$form-label-color-invalid: #eb1919;
+$input-error-color: #eb1919;
 $input-error-font-size: rem-calc(12);
 $input-error-font-weight: $global-weight-bold;
 

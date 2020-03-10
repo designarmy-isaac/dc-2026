@@ -1,135 +1,90 @@
-<div class="grid-x grid-padding-x">
-  <div class="cell small-12 medium-5 large-6">
-    <h2 class="h1 header-group">{{header}}<br><span class="subheader">{{subheader}}</span></h2>
-    <p>{{paragraph}}</p>
-  </div>
+<div class="modal">
+  <div class="grid-x grid-padding-x">
+    <div class="cell small-12">
+      <button type="button" data-close aria-label="Close" class="close-modal clear button float-right"><span class="big">close</span></button>
+    </div>
+    <div class="cell small-12 signup-success">
+      <h2 class="huge">{{thank-you-header}}</h2>
+    </div>
+    <div class="cell small-12 large-6 m-b-2 signup-success">
+      <div class="grid-x">
+        <div class="cell small-12">
+          <h2 class="header-group h1 p-b-1">{{next-step-header}}<br><span class="subheader">{{next-step-subheader}}</span></h2>
+          <p>{{next-step-paragraph}}</p>
+        </div>
+        <div class="cell small-6">
+          <a href="#" class="share-cta" id="cta-facebook" data-share-channel="facebook"><i class="share-cta-icon fab fa-facebook-f"></i>{{share-cta-facebook}}</a><br>
+          <a href="#" class="share-cta" id="cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
+          <a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>
+          <a href="#" class="share-cta" id="cta-whatsapp" data-share-channel="whatsapp"> <i class="share-cta-icon fab fa-whatsapp"></i>{{share-cta-whatsapp}}</a>
+        </div>
+        <div class="cell small-6">
+          <a href="#" class="share-cta" id="cta-linkedin" data-share-channel="linkedin"><i class="share-cta-icon fab fa-linkedin"></i>{{share-cta-linkedin}}</a><br>
+          <a href="#" class="share-cta" id="cta-messenger" data-share-channel="messenger"><i class="share-cta-icon fab fa-facebook-messenger"></i>{{share-cta-messenger}}</a><br>
+          <a href="#" class="share-cta" id="cta-sms" data-share-channel="sms"><i class="share-cta-icon far fa-comment"></i>{{share-cta-sms}}</a><br>
+          <a href="#" class="share-cta" id="cta-email" data-share-channel="email"><i class="share-cta-icon far fa-envelope"></i>{{share-cta-email}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="cell small-12 large-6 signup-success">
+      <h2 class="h1 p-b-1">{{follow-header}}</h2>
+        <p class="m-b-2">{{follow-paragraph}}</p>
+        <div>
+          <a href="https://www.facebook.com/dc2026/" class="follow-button"><i class="follow-icon fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/dc2026" class="follow-button"><i class="follow-icon fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/dc2026/" class="follow-button"><i class="follow-icon fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="cell small-12 signup-error">
+      <h2 class="huge">{{error-header}}</h2>
+      <p>{{error-paragraph}}</p>
+    </div>
+    <div id="signup-header" class="cell small-12 medium-5 large-6">
+      <h2 class="h1 header-group">{{header}}<br><span class="subheader">{{subheader}}</span></h2>
+      <p>{{paragraph}}</p>
+    </div>
 
-  <div id="mc_embed_signup">
-    <form action="{{root}}process.php" "https://eventsdc.us12.list-manage.com/subscribe/post?u=ef289742b6538dd233f2ae53a&amp;id=9dbd6a6ea3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" data-abide novalidate>
+    <form data-abide novalidate action="/process.php" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="cell small-12 medium-7 large-6" target="_blank">
+      <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+        <input type="text" value="" name="FNAME" placeholder="Eddie" class="required" id="mce-FNAME" pattern="text" required>
+        <span class="form-error">{{first-name-error}}</span>
+      </label>
 
-      <div id="mc_embed_signup_scroll">
+      <label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
+        <input type="text" value="" name="LNAME" placeholder="Pope" class="required" id="mce-LNAME" pattern="text" required>
+        <span class="form-error">{{last-name-error}}</span>
+      </label>
 
-<!--      <div class="indicates-required"><span class="asterisk">*</span> {{indicates-required}}</div>-->
-      <div class="mc-field-group">
-        <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
-          <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>
-          <span class="form-error">{{first-name-error}}</span>
-        </label>
-      </div>
-      <div class="mc-field-group">
-        <label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
-          <input type="text" value="" name="LNAME" class="required" id="mce-LNAME" required>
-          <span class="form-error">{{last-name-error}}</span>
-        </label>
-      </div>
-      <div class="mc-field-group">
-        <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required pattern="email">
-          <span class="form-error">{{email-error}}</span>
-        </label>
-      </div>
-      <div class="mc-field-group">
-        <label for="mce-ZIP">Zip Code  <span class="asterisk">*</span>
-          <input type="text" value="" name="ZIP" class="required" id="ZIP">
-          <span class="form-error">{{zip-code-error}}</span>
-        </label>
-      </div>
-      <div class="mc-field-group size1of2">
-        <label for="mce-PHONE">Phone Number
-          <input type="text" name="PHONE" class="" value="" id="mce-PHONE">
-          <span class="form-error">{{zip-code-error}}</span>
-        </label>
-        <p><small>{{phone-number-disclaimer}}</small></p>
-      </div>
-      <div class="mc-field-group input-group">
-        <input type="checkbox" value="1" name="VOLUNTEER" id="mce-group[16309]-16309-0"><label for="mce-group[16309]-16309-0">{{#markdown}}{{checkbox-label}}{{/markdown}}</label>
-      </div>
+      <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+        <input type="email" value="" name="EMAIL" placeholder="eddie@dc2026.org" class="required email" id="mce-EMAIL" pattern="email" required>
+        <span class="form-error">{{email-error}}</span>
+      </label>
+
+      <label for="mce-ZIP">Zip Code  <span class="asterisk">*</span>
+        <input type="text" value="" name="ZIP" placeholder="20515" class="required" id="ZIP" pattern="zip" required>
+        <span class="form-error">{{zip-code-error}}</span>
+      </label>
+
+      <label for="mce-PHONE">Phone Number
+        <input type="text" name="PHONE" placeholder="1 (202) 123-4567" class="" value="" id="mce-PHONE" pattern="phone">
+        <span class="form-error">{{phone-error}}</span>
+      </label>
+      <p><small>{{phone-number-disclaimer}}</small></p>
+
+      <input type="checkbox" value="1" name="VOLUNTEER" id="mce-group[16309]-16309-0"><label class="checkbox-label" for="mce-group[16309]-16309-0">{{#markdown}}{{checkbox-label}}{{/markdown}}</label>
+
       <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef289742b6538dd233f2ae53a_9dbd6a6ea3" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button large success"></div>
+        <div id="mce-error-response" style="display:none"></div>
+        <div id="mce-success-response" style="display:none"></div>
       </div>
+
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef289742b6538dd233f2ae53a_9dbd6a6ea3" tabindex="-1" value=""></div>
+
+      <div class="p-t-3">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button large success">
+      </div>
+
     </form>
+
   </div>
-
-
-  
-  
-<!--
-
-  <div id="mc_embed_signup" class="cell small-12 medium-7 large-6">
-    <form action="https://designarmy.us16.list-manage.com/subscribe/post?u=d5e8de64f5da0f358d1ea065c&amp;id=1b7139ca28" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div class="indicates-required reverse"><small><span class="asterisk">*</span> {{indicates-required}}</small></div>
-      <div id="mc_embed_signup_scroll">
-      <div class="mc-field-group special-label">
-      <label for="mce-FNAME">{{first-name-label}} <span class="asterisk">*</span></label>
-      <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-      </div>
-      <div class="mc-field-group special-label">
-      <label for="mce-LNAME">{{last-name-label}} <span class="asterisk">*</span></label>
-      <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-      </div>
-      <div class="mc-field-group special-label">
-      <label for="mce-EMAIL">{{email-label}} <span class="asterisk">*</span></label>
-      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-      </div>
-      <div class="mc-field-group size1of2 special-label">
-      <label for="mce-PHONE">{{phone-number-label}}</label>
-      <input type="text" name="PHONE" class="" value="" id="mce-PHONE">
-      </div>
-      <div class="mc-field-group special-label">
-      <label for="mce-ZIP">{{zip-code-label}} <span class="asterisk">*</span></label>
-      <input type="text" value="" name="ZIP" class="" id="mce-ZIP">
-      </div>
-      <div class="mc-field-group">
-        <input type="checkbox" value="1" name="group[8067][1]" id="mce-group[8067]-8067-0"><label for="mce-group[8067]-8067-0" class="checkbox-label">{{#markdown}}{{checkbox-label}}{{/markdown}}</label>
-      </div>
-      <div id="mce-responses" class="clear">
-      <div class="response" id="mce-error-response" style="display:none"></div>
-      <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>     real people should not fill this in and expect good things - do not remove this or risk form bot signups
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d5e8de64f5da0f358d1ea065c_1b7139ca28" tabindex="-1" value=""></div>
-      <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button large success"></div>
-      </div>
-    </form>
-  </div>
--->
 </div>
-
-<script>
-
-  var $form = $('#mc_embed_signup');
-  
-  $form.foundation('enableValidation');
-  
-//  $('form input[type="submit"]').bind('click', function ( event ) {
-//    if ( event ) event.preventDefault();
-//    window.alert('works');
-//    // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
-//  //  if ( validate_input($form) ) { register($form); }
-//    register($form);
-//  });
-//
-//
-//  function register($form) {
-//    $.ajax({
-//      type: $form.attr('method'),
-//      url: $form.attr('action'),
-//      data: $form.serialize(),
-//      cache       : false,
-//      dataType    : 'json',
-//      contentType: "application/json; charset=utf-8",
-//      error       : function(err) { alert("Could not connect to the registration server. Please try again later."); },
-//      success     : function(data) {
-//        if (data.result != "success") {
-//            // Something went wrong, do something to notify the user. maybe alert(data.msg);
-//        } else {
-//            // It worked, carry on...
-//        }
-//      }
-//    });
-//  }
-
-</script>
