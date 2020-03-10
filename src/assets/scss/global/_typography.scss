@@ -27,6 +27,12 @@ h3,
   text-transform: uppercase;
 }
 
+.huge {
+  font-size: rem-calc(100px);
+  line-height: rem-calc(76px);
+  margin-bottom: 2rem;
+}
+
 .h1 .subheader {
   @extend .h2;
   line-height: rem-calc(33px);

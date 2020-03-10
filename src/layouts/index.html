@@ -72,7 +72,7 @@
     
     
     
-    <div class="signup-banner"><a href="_signup.html" rel="modal:open" class="button secondary large" >{{cta}}</a></div>
+    <div class="signup-banner"><button class="button secondary large signup-opener" >{{cta}}</button></div>
 
     <section class="grid-container p-b-2" id="section-intro">
       <div class="grid-x grid-padding-x">
@@ -170,19 +170,19 @@
         </div>
       </div>
     </section>
-    
+        
     <section class="grid-container m-t-3" id="section-highlight">
       <div class="grid-x">
         <div class="cell small-12 large-5">
           <div class="highlight-box">
             <h2 class="header-group h1 p-b-3">{{pledge-header}}<br><span class="subheader">{{pledge-subheader}}</span></h2>
-            <a href="_signup.html" rel="modal:open" class="button success large">{{pledge-button}}</a>
+            <button class="button success large signup-opener">{{pledge-button}}</button>
           </div>
         </div>
         <div class="cell small-12 large-5 large-offset-1">
           <div class="highlight-box m-t-5">
             <h2 class="header-group h1 p-b-3">{{volunteer-header}}<br><span class="subheader">{{volunteer-subheader}}</span></h2>
-            <a href="_signup.html" rel="modal:open" class="button success large">{{volunteer-button}}</a>
+            <button class="button success large signup-opener">{{volunteer-button}}</button>
           </div>
         </div>
       </div>
@@ -277,7 +277,7 @@
         <div class="cell small-12 medium-7 large-5">
           <h2 class="h1">{{contact-header}}</h2>
           <p>{{contact-paragraph}}</p>
-          <a href="_contact.html" rel="modal:open" class="button success large">{{contact-button}}</a>
+          <button class="button success large contact-opener">{{contact-button}}</button>
         </div>
       </div>
       <div class="grid-x m-b-2">
@@ -548,6 +548,8 @@
         </div>
       </div>
     </footer>
+    
+    <div class="reveal large reverse" id="modal" data-reveal data-overlay="true" data-animation-in="fade-in" data-animation-out="fade-out" data-events="resize"></div>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{root}}assets/js/app.js"></script>

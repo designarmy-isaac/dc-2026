@@ -1,3 +1,8 @@
+.signup-success,
+.signup-error {
+  display: none;
+}
+
 .button {
   text-transform: uppercase;
 }
@@ -11,6 +16,10 @@
   top: rem-calc(14px);
   left: rem-calc(10px);
   padding: 2px;
+}
+
+.is-invalid-input::placeholder {
+  color: $white;
 }
 
 input[type=email],
@@ -55,4 +64,10 @@ input[type=checkbox] {
 
 .checkbox-label {
   display: inline-block;
+  width: 80%;
+  padding-left: 2rem;
+  & p {
+    position: relative;
+    top: 1.25rem;
+  }
 }

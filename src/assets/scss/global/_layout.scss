@@ -346,6 +346,7 @@ nav {
     content: '';
     opacity: 0;
     background-color: $warning-color;
+    border-radius: 2px;
     display: inline-block;
     position: absolute;
     top: 0;
@@ -376,6 +377,20 @@ nav {
   }
 }
 
+.reverse {
+  .share-cta {
+    color: $primary-color;
+    &:hover {
+      color: $white;
+      & .share-cta-icon {
+        color: $primary-color;
+      }
+    }
+  }
+  .follow-button {
+    color: $white;
+  }
+}
     
 /* ===================================
 ====================================== FOLLOW US
