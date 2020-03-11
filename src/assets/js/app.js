@@ -29,8 +29,8 @@ function fn() {
 =================================== */
   
   AOS.init({
-    duration: 1000,
-    easing: 'ease-out',
+    duration: 400,
+    easing: 'ease-out-sine',
     delay: 100,
     disable: 'mobile',
   });
@@ -125,6 +125,11 @@ $('.signup-opener').on('click', function() {
   $.ajax('_signup.html').
     done(function(content) {
       $('#modal').html(content).foundation('open');
+      var dataIntent = $('[data-origin="true"]').data("intent"); //grabs the intent value from the button that originated the modal opening
+      if ( dataIntent === 'volunteer') {
+        $('[data-receive="intent"]').prop("checked", true); // set volunteer checkbox to checked
+      }
+      $('[data-origin="true"]').attr("data-origin", "false"); // reset originating button
   });
 });
 
@@ -142,34 +147,107 @@ $('[data-reveal]').on('open.zf.reveal', function () {
   
   $(document).on("submit", function(ev) {
     ev.preventDefault();
-    $.ajax({
-      url: '//localhost/dc-2026/dist/process.php',
-      type: 'POST',
-      data: $('#mc-embedded-subscribe-form').serialize(),
-      success: function(response) {
-        if(response === 200) {
-          $('#mc-embedded-subscribe-form').hide();
-          $('#signup-header').hide();
-          $('.signup-success').show();
-//            var height = $('.sign-up').height();
-//            $('.sign-up').height(height);
-//            $('.sign-up .form-controls').addClass('done');
-//            $('.sign-up .success-message').addClass('show');
-//            $('.sign-up .error-message').removeClass('show');
-        } else {
-//            $('.sign-up .error-message').addClass('show');
+    if ( ev.target.id == 'mc-embedded-subscribe-form') {
+      $.ajax({
+        url: '//localhost/dc-2026/dist/process.php',
+        type: 'POST',
+        data: $('#mc-embedded-subscribe-form').serialize(),
+        success: function(response, status, xhr) {
+          if(response == 200) {
+            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+                        'xhr.status = '+xhr.status+ '\n' +
+                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+                        'status = '+status+ '\n' +
+                        'response = '+response);
+            $('#mc-embedded-subscribe-form').hide();
+            $('#signup-header').hide();
+            $('.signup-success').show();
+          } else {
+            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+                        'xhr.status = '+xhr.status+ '\n' +
+                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+                        'status = '+status+ '\n' +
+                        'response = '+response);
+            $('.signup-error').addClass('show');
+          }
+        },
+        error: function(xhr, status, error) {
+          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+                      'xhr.status = '+xhr.status+ '\n' +
+                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+                      'status = '+status+ '\n' +
+                      'error = '+error);
+          $('.signup-error').addClass('show');
         }
-      },
-      error: function(xhr, status, error) {
-        alert(xhr.responseText);
-        $('.signup-error').addClass('show');
-      }
-//      error: function() {
-//          window.alert('error');
-//          $('.sign-up .error-message').text('Error! Try again');
-//      }
-    });
-//    window.alert("Submit for form id "+ev.target.id+" intercepted");
+      });
+    }
+    if ( ev.target.id == 'c-form') {
+      var data = {
+        name: $("#c-EMAIL").val(),
+        email: $("#c-SUBJECT").val(),
+        message: $("#c-BODY").val()
+      };
+      $.ajax({
+          type: "POST",
+          url: "//localhost/dc-2026/dist/contact.php",
+          data: data,
+          success: function(response, status, xhr) {
+            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+                        'xhr.status = '+xhr.status+ '\n' +
+                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+                        'status = '+status+ '\n' +
+                        'response = '+response);
+            $('#c-form').hide();
+            $('#contact-header').hide();
+            $('.contact-success').show();
+          },
+          error: function(xhr, status, error) {
+            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+                        'xhr.status = '+xhr.status+ '\n' +
+                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+                        'status = '+status+ '\n' +
+                        'error = '+error);
+            $('.contact-error').addClass('show');
+          }
+      });
+    }
+//      window.alert('c-form');
+//      $.ajax({
+//        url: '//localhost/dc-2026/dist/contact.php',
+//        type: 'POST',
+//        data: $('#c-form').serialize(),
+//        success: function(response, status, xhr) {
+//          if(response == 200) {
+//            window.alert('Success criteria met');
+//            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+//                        'xhr.status = '+xhr.status+ '\n' +
+//                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+//                        'status = '+status+ '\n' +
+//                        'response = '+response);
+//            $('#mc-embedded-subscribe-form').hide();
+//            $('#signup-header').hide();
+//            $('.signup-success').show();
+//          } else {
+//            window.alert('Success criteria met, but 200 not returned');
+//            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+//                        'xhr.status = '+xhr.status+ '\n' +
+//                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+//                        'status = '+status+ '\n' +
+//                        'response = '+response);
+//            $('.signup-error').addClass('show');
+//          }
+//        },
+//        error: function(xhr, status, error) {
+//          window.alert('Error criteria met.');
+//          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+//                      'xhr.status = '+xhr.status+ '\n' +
+//                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+//                      'status = '+status+ '\n' +
+//                      'error = '+error);
+//          $('.signup-error').addClass('show');
+//        }
+//      });
+//    }
   });
 //  
 //  
