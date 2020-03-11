@@ -151,16 +151,16 @@ $header-styles: (
     'h1': ('font-size': 65),
     'h2': ('font-size': 39),
     'h3': ('font-size': 16),
-    'h4': ('font-size': 16),
+    'h4': ('font-size': 18),
     'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
   large: (
     'h1': ('font-size': 75),
-    'h2': ('font-size': 75),
-    'h3': ('font-size': 45),
-    'h4': ('font-size': 30),
-    'h5': ('font-size': 18),
+    'h2': ('font-size': 45),
+    'h3': ('font-size': 16),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
 );
@@ -292,7 +292,7 @@ $button-padding: 0.15em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-background-hover: scale-color($button-background, $lightness: +15%);
 $button-color: $white;
 $button-color-alt: $white;
 $button-radius: $global-radius;

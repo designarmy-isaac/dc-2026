@@ -120,7 +120,7 @@ body {
   overflow: hidden;
   margin-bottom: 3rem;
   @include breakpoint(medium) {
-    height: 90vw;
+    height: 70vw;
   }
 }
 
@@ -268,19 +268,15 @@ nav {
 ====================================== TABS
 =================================== */
 
-
-#tab-section-container {
-  overflow-x: hidden;
-}
-
-#tab-control-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .tab-control {
-  font-size: 2rem;
-  transition: color 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background: $warning-color;
+  padding: .25rem .35rem;
+  display: inline-block;
+  position: relative;
+  left: -.35rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 .tab-control.inactive {
@@ -288,16 +284,19 @@ nav {
 }
 
 @include breakpoint(large) {
-  .tab-control-container {
-    display: block;
-  }
 
   .tab-control.inactive {
-    font-size: 1.5rem;
+    font-size: rem-calc(30px);
     display: block;
     cursor: pointer;
+    opacity: .5;
+    background: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     &:hover {
-      color: $success-color;
+      color: $white;
+      opacity: 1;
+      left: 1.5rem;
     }
   }
 }
@@ -326,9 +325,6 @@ nav {
   background: $white;
   border-radius: $global-radius;
   color: $primary-color;
-  h2 {
-    line-height: .55;
-  }
 }
 
     
@@ -643,6 +639,14 @@ footer {
 footer h3,
 footer .h3 {
   margin-top: 6rem;
+}
+
+.button.large:hover {
+  background: $warning-color;
+}
+
+.button.large.secondary:hover {
+  background: #C70000;
 }
 
 .social-icon-link {

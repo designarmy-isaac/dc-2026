@@ -18,26 +18,13 @@ body {
   text-transform: uppercase;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3, h4, .h4, h5, .h5, h6, .h6 {
+/* ===================================
+====================================== HEADERS
+=================================== */
+
+
+h1, .h1, h2, .h2 {
   text-transform: uppercase;
-}
-
-.huge {
-  font-size: rem-calc(100px);
-  line-height: rem-calc(76px);
-  margin-bottom: 2rem;
-}
-
-.h1 .subheader {
-  @extend .h2;
-  line-height: rem-calc(33px);
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -46,13 +33,23 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-transform: none;
 }
 
-.header-group {
-  line-height: rem-calc(33px);
+.huge {
+  font-size: rem-calc(100px);
+  line-height: rem-calc(76px);
+  margin-bottom: 2rem;
 }
 
-h3.header-group {
-  padding-bottom: 1rem;
+.header-group {
+  line-height: rem-calc(33px);
+  & *:first-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  & *:last-child {
+    margin-bottom: 1.5rem;
+  }
 }
+
 
 .lead {
   text-transform: uppercase;
@@ -62,15 +59,6 @@ h3.header-group {
   }
 }
 
-h2 {
-  margin-bottom: 1.5rem;
-  & .subheader {
-    font-size: rem-calc(26);
-    @include breakpoint(medium) {
-      font-size: rem-calc(45);
-    }
-  }
-}
 
 
 /* ===================================
@@ -78,8 +66,8 @@ h2 {
 =================================== */
 
 
-.button {
-  transition: all 0.25s ease-out;
+.button.large {
+  transition: background 0.15s ease-out;
 }
 
 
