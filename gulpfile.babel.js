@@ -30,7 +30,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, php, javascript, images, copy), sass, revAll));
+ gulp.series(clean, gulp.parallel(vendor, pages, php, javascript, images, copy), sass, revAll));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -66,6 +66,12 @@ function pages() {
 function php() {
   return gulp.src('src/pages/**/*.php')
   .pipe(gulp.dest(PATHS.dist));
+}
+
+// Copy vendor
+function vendor() {
+  return gulp.src('vendor/**/*.*')
+  .pipe(gulp.dest(PATHS.dist+'/vendor'));
 }
 
 // Load updated HTML templates and partials into Panini

@@ -34,22 +34,9 @@ function syncMailchimp($data_email, $data_fname, $data_lname, $data_zip, $data_p
     curl_setopt($ch, CURLOPT_POSTFIELDS, $json);                                                                                                                 
     $result = curl_exec($ch);
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    print_r($_POST);
     curl_close($ch);
     header('Content-Type: application/json');
     exit(json_encode($httpCode));
 }
 syncMailchimp($data_email, $data_fname, $data_lname, $data_zip, $data_phone, $data_volunteer);
 ?>
-
-<!--
-//        'LNAME' => $data_lname,
-//        'ZIP'   => $data_zip,
-//        'PHONE' => $data_phone,
-//        'group[16309][1]' => $data_volunteer
-      ] 
-
-//$data_lname = $_POST['LNAME'];
-//$data_phone = $_POST['PHONE'];
-//$data_zip = $_POST['ZIP'];
-//$data_volunteer = $_POST['group[16309][1]'];-->
