@@ -149,10 +149,10 @@
           <h2 class="h1" data-aos="fade-up">{{tabs-header}}</h2>
           <div id="tab-control-container">
             <div id="tab-container" data-aos="fade-up">
-              <h3 id="tab1" data-tab-number="1" class="h2 tab-control">{{tab1-header}}</h3>
-              <h3 id="tab2" data-tab-number="2" class="h2 inactive tab-control">{{tab2-header}}</h3>
+              <h3 id="tab1" data-tab-number="1" class="h2 tab-control" style="line-height:1">{{tab1-header}}</h3>
+              <h3 id="tab2" data-tab-number="2" class="h2 inactive tab-control" style="line-height:1">{{tab2-header}}</h3>
               <h3 id="tab3" data-tab-number="3" class="h2 inactive tab-control">{{tab3-header}}</h3>
-              <h3 id="tab4" data-tab-number="4" class="h2 inactive tab-control">{{tab4-header}}</h3>
+              <h3 id="tab4" data-tab-number="4" class="h2 inactive tab-control" style="line-height:1">{{tab4-header}}</h3>
             </div>
           </div>
         </div>
@@ -213,98 +213,106 @@
         </div>
       </div>
     </section>
-    
-    <section class="grid-container" id="section-share">
-      <div class="grid-x grid-padding-x">
-        <div id="post-container" class="cell small-12 medium-5 medium-offset-1 large-4 show-for-large" data-aos="fade">
-          <div class="post-example" id="post-facebook" data-post-channel="facebook">
-            <img alt="{{social-facebook-img-alt}}" src="https://placehold.it/600x300">
-            <p><strong>{{social-facebook-title}}</strong>
-            {{social-facebook-paragraph-preview}}
-            </p>
-          </div>
-          <div class="post-example hidden" id="post-twitter" data-post-channel="twitter">
-            <p>{{social-twitter-paragraph-preview}}</p>
-          </div>
-          <div class="post-example hidden" id="post-instagram" data-post-channel="instagram">
-            <img alt="{{social-twitter-img-alt}}" src="https://placehold.it/480x480">
-            <p>
-            {{social-instagram-paragraph}}
-            </p>
-          </div>
-          <div class="post-example hidden" id="post-whatsapp" data-post-channel="whatsapp">
-            <p>
-            {{social-whatsapp-paragraph}}
-            </p>
-          </div>
-          <div class="post-example hidden" id="post-linkedin" data-post-channel="linkedin">
-            <img alt="{{social-linkedin-img-alt}}" src="https://placehold.it/600x300">
-            <p>
-            {{social-linkedin-paragraph}}
-            </p>
-          </div>
-          <div class="post-example hidden" id="post-messenger" data-post-channel="messenger">
-            <p>
-            {{social-messenger-paragraph}}
-            </p>
-          </div>
-          <div class="post-example hidden" id="post-sms" data-post-channel="sms">
-            <p>
-            {{social-sms-paragraph}}
-            </p>
-          </div>
-          <div class="post-example hidden" id="post-email" data-post-channel="email">
-            <div id="post-email-top-bar"></div>
-            <p id="post-email-input-bar">
-              <strong>{{social-email-subject}}asdfasd</strong>
-            </p>
-            <p>
-            {{social-email-paragraph}}
-            </p>
-          </div>
-        </div>
-        <div class="cell small-12 medium-6 medium-offset-1 large-4">
-          <div class="grid-x">
-            <div class="cell small-12" data-aos="fade">
-              <div class="header-group m-b-3">
-                <h2 class="h1">{{ share-header }}</h2>
-                <h3 class="h2">{{ share-hashtag }}</h3>
+    <div id="share-background" class="fluid" data-interchange="[{{root}}assets/img/DC2026-Share_Background-sm.png, small], [{{root}}assets/img/DC2026-Share_Background-sm.png, large]">
+      <section class="grid-container p-t-6 p-b-8" id="section-share">
+        <div class="grid-x grid-padding-x">
+          <div id="post-container" class="cell small-12 medium-5 medium-offset-1 large-3 large-offset-2 show-for-large" data-aos="fade">
+            <div class="post-example" id="post-facebook" data-post-channel="facebook">
+              <div class="post-text-container">
+  <!--              <strong>{{social-facebook-title}}</strong>-->
+                {{#markdown}}{{social-facebook-paragraph-preview}}{{/markdown}}
+              </div>
+              <img alt="{{social-facebook-img-alt}}" src="{{root}}assets/img/DC26_Share_Facebook.jpg">
+            </div>
+            <div class="post-example hidden" id="post-twitter" data-post-channel="twitter">
+              <div class="post-text-container">
+                {{#markdown}}{{social-twitter-paragraph-preview}}{{/markdown}}
+              </div>
+              <img alt="{{social-twitter-img-alt}}" src="{{root}}assets/img/DC26_Share_Twitter.jpg">
+            </div>
+            <div class="post-example hidden" id="post-instagram" data-post-channel="instagram">
+              <img alt="{{social-instagram-img-alt}}" src="{{root}}assets/img/DC26_Share_Instagram.jpg">
+              <div class="post-text-container">
+                {{#markdown}}{{social-instagram-paragraph-preview}}{{/markdown}}
               </div>
             </div>
-            <div class="cell small-6" data-aos="fade">
-              <a href="#" class="share-cta" id="cta-facebook" data-share-channel="facebook"><i class="share-cta-icon fab fa-facebook-f"></i>{{share-cta-facebook}}</a><br>
-              <a href="#" class="share-cta" id="cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
-              <a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>
-             <a href="#" class="share-cta" id="cta-whatsapp" data-share-channel="whatsapp"> <i class="share-cta-icon fab fa-whatsapp"></i>{{share-cta-whatsapp}}</a>
+            <div class="post-example hidden" id="post-whatsapp" data-post-channel="whatsapp">
+              <div class="post-text-container"><p>
+              {{social-whatsapp-paragraph}}
+              </p></div>
             </div>
-            <div class="cell small-6" data-aos="fade">
-              <a href="#" class="share-cta" id="cta-linkedin" data-share-channel="linkedin"><i class="share-cta-icon fab fa-linkedin"></i>{{share-cta-linkedin}}</a><br>
-              <a href="#" class="share-cta" id="cta-messenger" data-share-channel="messenger"><i class="share-cta-icon fab fa-facebook-messenger"></i>{{share-cta-messenger}}</a><br>
-              <a href="#" class="share-cta" id="cta-sms" data-share-channel="sms"><i class="share-cta-icon fas fa-sms"></i>{{share-cta-sms}}</a><br>
-              <a href="#" class="share-cta" id="cta-email" data-share-channel="email"><i class="share-cta-icon far fa-envelope"></i>{{share-cta-email}}</a>
+            <div class="post-example hidden" id="post-linkedin" data-post-channel="linkedin">
+              <div class="post-text-container">
+                {{#markdown}}{{social-linkedin-paragraph-preview}}{{/markdown}}
+              </div>
+              <img alt="{{social-linkedin-img-alt}}" src="{{root}}assets/img/DC26_Share_LinkedIn.jpg">
+            </div>
+            <div class="post-example hidden" id="post-messenger" data-post-channel="messenger">
+              <div class="post-text-container"><p>
+              {{social-messenger-paragraph}}
+              </p></div>
+            </div>
+            <div class="post-example hidden" id="post-sms" data-post-channel="sms">
+              <img alt="{{social-linkedin-img-alt}}" src="{{root}}assets/img/DC2026-og-img.jpg">
+              <div class="post-text-container">
+                {{#markdown}}{{social-sms-paragraph-preview}}{{/markdown}}
+              </div>
+            </div>
+            <div class="post-example hidden" id="post-email" data-post-channel="email">
+              <div id="post-email-top-bar"></div>
+              <div class="post-text-container">
+                <p id="post-email-input-bar">
+                  <strong>{{social-email-subject}}</strong>
+                </p>
+                <p>
+                  {{social-email-paragraph}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-12 medium-6 medium-offset-1 large-4">
+            <div class="grid-x">
+              <div class="cell small-12" data-aos="fade">
+                <div class="header-group m-b-3">
+                  <h2 class="h1">{{ share-header }}</h2>
+                  <h3 class="h2">{{ share-hashtag }}</h3>
+                </div>
+              </div>
+              <div class="cell small-6" data-aos="fade">
+                <a href="#" class="share-cta" id="cta-facebook" data-share-channel="facebook"><i class="share-cta-icon fab fa-facebook-f"></i>{{share-cta-facebook}}</a><br>
+                <a href="#" class="share-cta" id="cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
+                <a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>
+               <a href="#" class="share-cta" id="cta-whatsapp" data-share-channel="whatsapp"> <i class="share-cta-icon fab fa-whatsapp"></i>{{share-cta-whatsapp}}</a>
+              </div>
+              <div class="cell small-6" data-aos="fade">
+                <a href="#" class="share-cta" id="cta-linkedin" data-share-channel="linkedin"><i class="share-cta-icon fab fa-linkedin"></i>{{share-cta-linkedin}}</a><br>
+                <a href="#" class="share-cta" id="cta-messenger" data-share-channel="messenger"><i class="share-cta-icon fab fa-facebook-messenger"></i>{{share-cta-messenger}}</a><br>
+                <a href="#" class="share-cta" id="cta-sms" data-share-channel="sms"><i class="share-cta-icon fas fa-sms"></i>{{share-cta-sms}}</a><br>
+                <a href="#" class="share-cta" id="cta-email" data-share-channel="email"><i class="share-cta-icon far fa-envelope"></i>{{share-cta-email}}</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     
     <section id="section-media" class="grid-container">
       <div id="media-graphics">
         <picture>
-          <source srcset="{{root}}assets/img/DC2026-media_pattern-lg.png" media="(min-width: 960px)"> 
-          <img src="{{root}}assets/img/DC2026-media_pattern-sm.png" alt="" id="media-graphic-pattern" data-aos="fade">
+<!--          <source srcset="{{root}}assets/img/DC2026-media_pattern-lg.png" media="(min-width: 960px)"> -->
+          <img src="{{root}}assets/img/DC2026-media_pattern-sm.png" alt="" id="media-graphic-pattern" data-aos="fade" data-aos-anchor-placement="top-bottom">
         </picture>
         <picture>
-          <source srcset="{{root}}assets/img/DC2026-Mia_Hamm_silhouette-md.png" media="(min-width: 960px)"> 
-          <img src="{{root}}assets/img/DC2026-Mia_Hamm_silhouette-sm.png" alt="" id="media-graphic-silhouette" data-aos="fade-right" data-aos-delay="200">
+<!--          <source srcset="{{root}}assets/img/DC2026-Mia_Hamm_silhouette-lg.png" media="(min-width: 960px)"> -->
+          <img src="{{root}}assets/img/DC2026-Mia_Hamm_silhouette-sm.png" alt="" id="media-graphic-silhouette" data-aos="fade-right">
         </picture>
         <picture>
           <source srcset="{{root}}assets/img/DC2026-Mia_Hamm-lg.png" media="(min-width: 960px)"> 
-          <img src="{{root}}assets/img/DC2026-Mia_Hamm-sm.png" alt="{{ media-athlete-image-alt }}" id="media-graphic-athlete" data-aos="fade-right" data-aos-delay="500">
+          <img src="{{root}}assets/img/DC2026-Mia_Hamm-sm.png" alt="{{ media-athlete-image-alt }}" id="media-graphic-athlete" data-aos="fade-right" data-aos-delay="200">
         </picture>
       </div>
       <div class="grid-x m-b-8">
-        <div class="cell small-10 medium-6 medium-offset-1 large-5">
+        <div class="cell small-10 medium-6 medium-offset-1 large-4 large-offset-0">
           <h2 class="h1" data-aos="fade">{{follow-header}}</h2>
           <p data-aos="fade">{{follow-paragraph}}</p>
           <div data-aos="fade">
@@ -317,42 +325,44 @@
         </div>
       </div>
       <div class="grid-x m-b-8">
-        <div class="cell small-10 medium-6 medium-offset-1 large-5">
+        <div class="cell small-10 medium-6 medium-offset-1 large-4 large-offset-0">
           <h2 class="h1" data-aos="fade">{{contact-header}}</h2>
           <p data-aos="fade">{{contact-paragraph}}</p>
           <button class="button success large contact-opener" data-aos="fade">{{contact-button}}</button>
         </div>
       </div>
       <div class="grid-x">
-        <div class="cell small-10 medium-6 medium-offset-1 large-5">
+        <div class="cell small-10 medium-6 medium-offset-1 large-3 large-offset-0">
           <h2 class="h1" data-aos="fade">{{media-header}}</h2>
-          <p data-aos="fade" style="margin-bottom: 0; padding-bottom: 0;">{{media-paragraph}}</p>
+          <p data-aos="fade">{{media-paragraph}}</p>
         </div>
       </div>
       <div class="grid-x p-b-8">
-        <div class="cell small-6 medium-offset-1 large-offset-1 large-10">
-          <div class="download" data-aos="fade">
-            <img alt="{{download-logo-img-alt}}" src="https://placehold.it/350x500">
-            <h3 class="h4">{{download-logo}}</h3>
-            <p>
-              <a href="#TODO">{{download-label}} .png</a><br>
-              <a href="#TODO">{{download-label}} .eps</a>
-            </p>
-          </div>
-          <div class="download" data-aos="fade">
-            <img alt="{{download-fact-sheet-img-alt}}" src="https://placehold.it/350x500">
-            <h3 class="h4">{{download-fact-sheet}}</h3>
-            <p>
-              <a href="#TODO">{{download-label}} PDF</a>
-            </p>
-          </div>
-          <div class="download" data-aos="fade">
-            <img alt="{{download-press-release-img-alt}}" src="https://placehold.it/350x500">
-            <h3 class="h4">{{download-press-release}}</h3>
-            <p>
-              <a href="#TODO">{{download-label}} PDF</a>
-            </p>
-          </div>
+        <div class="cell small-6 medium-offset-1 large-10" data-aos="fade">
+            <div class="grid-x grid-margin-x">
+              <div class="cell small-12 large-3 download">
+                <img alt="{{download-logo-img-alt}}" src="{{root}}assets/img/DC26_Logo_Image.jpg">
+                <h3 class="h4">{{download-logo}}</h3>
+                <p>
+                  <a href="{{root}}assets/img/DC26_Logos_png.zip" target="_blank">{{download-label}} .png</a><br>
+                  <a href="{{root}}assets/img/DC26_Logos_eps.zip" target="_blank">{{download-label}} .eps</a>
+                </p>
+              </div>
+              <div class="cell small-12 large-3 large-offset-1 download">
+                <img alt="{{download-fact-sheet-img-alt}}" src="{{root}}assets/img/DC26_FactSheet_Image.jpg">
+                <h3 class="h4">{{download-fact-sheet}}</h3>
+                <p>
+                  <a href="{{root}}assets/img/DC26_FactSheet.pdf" target="_blank">{{download-label}} PDF</a>
+                </p>
+              </div>
+              <div class="cell small-12 large-3 large-offset-1 download">
+                <img alt="{{download-press-release-img-alt}}" src="https://placehold.it/350x450">
+                <h3 class="h4">{{download-press-release}}</h3>
+                <p>
+                  <a href="#TODO" target="_blank">{{download-label}} PDF</a>
+                </p>
+              </div>
+            </div>
         </div>
       </div>
     </section>

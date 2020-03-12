@@ -304,7 +304,7 @@ $button-sizes: (
   large: rem-calc(36px),
 );
 $button-palette: $foundation-palette;
-$button-opacity-disabled: 0;
+$button-opacity-disabled: .5;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: +0%;
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
