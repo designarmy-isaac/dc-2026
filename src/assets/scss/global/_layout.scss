@@ -50,6 +50,10 @@
   z-index: 500;
 }
 
+#language-nav {
+  z-index: 450;
+}
+
 .share-cta {
   z-index: 400;
 }
@@ -122,6 +126,9 @@ body {
   @include breakpoint(medium) {
     height: 70vw;
   }
+  @include breakpoint(large) {
+    height: 60vw;
+  }
 }
 
 #logo-container {
@@ -154,6 +161,12 @@ body {
     top: 15vw;
     left: 12%;
   }
+  @include breakpoint(large) {
+    width: 18%;
+    top: 10rem;
+    top: 10vw;
+    left: 10%;
+  }
 }
 
 #hero-graphics {
@@ -171,6 +184,9 @@ body {
   @include breakpoint(medium) {
     height: 70vw;
   }
+  @include breakpoint(large) {
+    height: 60vw;
+  }
 }
 
 #hero-graphic-pattern {
@@ -183,6 +199,7 @@ body {
     left: 30%;
     width: 90%;
   }
+  
 }
 
 #hero-graphic-silhouette {
@@ -196,6 +213,11 @@ body {
     top: 8vw;
     left: 49%;
     width: 50%;
+  }
+  @include breakpoint(large) {
+    top: 1rem;
+    top: 1vw;
+    width: 43%;
   }
 }
 
@@ -211,6 +233,11 @@ body {
     left: 50%;
     width: 45%;
   }
+  @include breakpoint(large) {
+    top: 4rem;
+    top: 4vw;
+    width: 41%;
+  }
 }
 
 #hero-graphic-banner {
@@ -224,6 +251,9 @@ body {
     bottom: -4rem;
     left: 10%;
     width: 100%;
+  }
+  @include breakpoint(large) {
+    bottom: -10rem;
   }
 }
 
@@ -311,26 +341,38 @@ nav {
   color: $primary-color;
 }
 
-@mixin box-3d($color) {
+@mixin box-3d($color, $start, $steps) {
   $ts: ();
-  @for $i from 1 through 500 {
+  @for $i from $start through $steps {
     $ts: $ts, $i*2px $i*2px $color;            
   }
   box-shadow: $ts;
 }
 
 .highlight-box {
-  @include box-3d($success-color);
+  @include box-3d($success-color, 1, 300);
   padding: 3rem 2rem 2rem;
   background: $white;
   border-radius: $global-radius;
   color: $primary-color;
+  @include breakpoint(medium) {
+    @include box-3d($success-color, 1, 500);
+  }
+  @include breakpoint(large) {
+    @include box-3d($success-color, 1, 700);
+  }
 }
 
     
 /* ===================================
 ====================================== SHARE
 =================================== */
+
+#share-background {
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 #section-share {
   margin-top: 12rem;
@@ -339,6 +381,7 @@ nav {
 
 #post-container {
   position: relative;
+  font-size: 80%;
 }
 
 .post-example {
@@ -349,12 +392,12 @@ nav {
   width: 100%;
   transition: all .5s ease-out;
   top: 0;
-  img {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  }
+}
+
+.post-text-container {
+  padding: .5rem .5rem 1rem;
+  margin: 0;
   p {
-    padding: rem-calc(24px);
     margin: 0;
   }
 }
@@ -369,16 +412,40 @@ nav {
   margin-left: 10%;
   margin-right: 10%;
   width: 80%;
+  border-radius: 2px;
+  img {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
 }
 
+#post-twitter,
+#post-linkedin,
+#post-facebook {
+  border-radius: .5rem;
+  padding: .75rem;
+  img {
+    border-radius: .5rem;
+  }
+}
 #post-twitter {
-  margin-top: 7rem;
+  margin-top: 3rem;
 }
 
-#post-sms,
+#post-sms {
+  margin-top: 3rem;
+}
 #post-whatsapp,
 #post-messenger {
   margin-top: 6rem;
+}
+#post-sms,
+#post-whatsapp,
+#post-messenger {
+  img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
   &:after {
     content: '';
     display: inline-block;
@@ -395,6 +462,7 @@ nav {
 }
 
 #post-email {
+  margin-top: 2rem;
   border-radius: 6px;
   padding-bottom: rem-calc(36px);
 }
@@ -407,9 +475,7 @@ nav {
 }
 
 #post-email-input-bar {
-  margin-top: rem-calc(28px);
-  margin-right: rem-calc(24px);
-  margin-left: rem-calc(24px);
+  margin-bottom: .5rem;
   padding: 4px 2px 4px 2px;
   border-top: 1px solid $light-gray;
   border-bottom: 1px solid $light-gray;
@@ -516,33 +582,23 @@ nav {
 }
 
 .download {
-  display: block;
-  vertical-align: top;
-  &:last-child {
-    margin-right: 0;
-  }
-  @include breakpoint(large) {
-    width: 30%;
-    margin-right: 6%; 
-    display: inline-block;
-  }
   & img {
     display: none;
     @include breakpoint(large) {
       display: inline-block;
       margin-bottom: 1rem;
+      margin-top: 2rem;
     }
   }
   .h4 {
-    text-align: left;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
   & a {
     text-decoration: underline;
     display: inline-block;
     padding-top: rem-calc(4px);
     padding-bottom: rem-calc(4px);
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -555,7 +611,6 @@ nav {
   width: 100%;
   height: 100%;
   max-width: 100%;
-  overflow: hidden;
   img {
     position: absolute;
   }
@@ -571,6 +626,10 @@ nav {
     width: 100%;
     left: 35%;
   }
+  @include breakpoint(large) {
+    width: 80%;
+    bottom: 0;
+  }
 }
 
 #media-graphic-silhouette {
@@ -582,6 +641,10 @@ nav {
     width: 39%;
     left: 64%;
   }
+  @include breakpoint(large) {
+    top: -4rem; left: 53%; bottom: auto;
+    width: 30%;
+  }
 }
 
 #media-graphic-athlete {
@@ -592,6 +655,10 @@ nav {
   @include breakpoint(medium) {
     left: 63%;
     width: 55%;
+  }
+  @include breakpoint(large) {
+    top: -1rem; left: 53%; bottom: auto;
+    width: 42%;
   }
 }
 
