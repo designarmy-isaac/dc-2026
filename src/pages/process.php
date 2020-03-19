@@ -13,7 +13,7 @@ if(isset($_POST['VOLUNTEER']) &&
 }
 
 function syncMailchimp($data_email, $data_fname, $data_lname, $data_zip, $data_phone, $data_volunteer) {
-    $apiKey = '';
+    $apiKey = '<%-mckey-%>';
     $listId = '9dbd6a6ea3';
     $memberId = md5(strtolower($data_email));
     $dataCenter = substr($apiKey,strpos($apiKey,'-')+1);
