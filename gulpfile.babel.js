@@ -12,7 +12,9 @@ import webpackStream from 'webpack-stream';
 import webpack2      from 'webpack';
 import named         from 'vinyl-named';
 import autoprefixer  from 'autoprefixer';
+import replace			 from 'gulp-string-replace';
 import RevAll        from 'gulp-rev-all';
+import env					 from './.env';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -65,6 +67,16 @@ function pages() {
 // Copy php
 function php() {
   return gulp.src('src/pages/**/*.php')
+	.pipe($.if(PRODUCTION, replace(/<%-[A-z]*-%>/g, function(replacement) {
+		var key = replacement.match(/(?<=<%-)(.*)(?=-%>)/g),
+				{ mckey, mailhost, mailuser, mailpw, mailauth, mailautotls, mailsecure, mailport, } = env.prod;
+		return eval(key[0]);
+	})))
+	.pipe($.if(!PRODUCTION, replace(/<%-[A-z]*-%>/g, function(replacement) {
+		var key = replacement.match(/(?<=<%-)(.*)(?=-%>)/g),
+				{ mckey, mailhost, mailuser, mailpw, mailauth, mailautotls, mailsecure, mailport, } = env.dev;
+		return eval(key[0]);
+	})))
   .pipe(gulp.dest(PATHS.dist));
 }
 

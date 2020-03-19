@@ -11,23 +11,15 @@ $subject = $_REQUEST['SUBJECT'];
 $body = $_REQUEST['BODY'];
 
 try {
-    // PROD Server settings 
-//    $mail->SMTPDebug = SMTP::DEBUG_SERVER
-//    $mail->isSMTP();
-//    $mail->Host       = 'localhost';
-//    $mail->SMTPAuth   = false;
-//    $mail->SMTPAutoTLS = false
-//    $mail->Port       = 25;
-  
-    //LOCAL Server settings
+    // Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'washingtondc2026@gmail.com';
-    $mail->Password   = '';
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+    $mail->Host       = '<%-mailhost-%>';
+    $mail->SMTPAuth   = <%-mailauth-%>;
+    $mail->Username   = '<%-mailuser-%>';
+    $mail->Password   = '<%-mailpw-%>';
+    $mail->SMTPSecure = <%-mailsecure-%>;
+    $mail->Port       = <%-mailport-%>;
 
     //Recipients
     $mail->setFrom('webform@dc2026.org', 'dc2026.org Webform');
