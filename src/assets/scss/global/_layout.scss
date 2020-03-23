@@ -46,6 +46,10 @@
 ====================================== Z-INDEX
 =================================== */
 
+.button.large span {
+	z-index: 600;
+}
+
 .signup-banner {
   z-index: 500;
 }
@@ -701,12 +705,37 @@ footer .h3 {
   margin-top: 6rem;
 }
 
+.button.large {
+	span {
+		position: relative;
+		display: inline-block;
+	}
+	position: relative;
+	&:after {
+		content: '';
+		background: $warning-color;
+		border-radius: 2px;
+		position: absolute;
+		top: 0; left: 0; bottom: 0;
+		margin: -1px;
+		height: 105%;
+		width: 0;
+		transition: .25s;
+	}
+}
+
 .button.large:hover {
-  background: $warning-color;
+	&:after {
+		width: 100.75%;
+	}
+}
+
+.button.large.secondary:after {
+  background: #C70000;
 }
 
 .button.large.secondary:hover {
-  background: #C70000;
+  background: $secondary-color;
 }
 
 .social-icon-link {

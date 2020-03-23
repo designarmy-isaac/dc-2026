@@ -222,7 +222,7 @@ $stat-font-size: 2.5rem;
 
 $abide-inputs: true;
 $abide-labels: true;
-$input-background-invalid: #eb1919;
+$input-background-invalid: $white;
 $form-label-color-invalid: #eb1919;
 $input-error-color: #eb1919;
 $input-error-font-size: rem-calc(12);
@@ -292,7 +292,7 @@ $button-padding: 0.15em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: +15%);
+$button-background-hover: $button-background;
 $button-color: $white;
 $button-color-alt: $white;
 $button-radius: $global-radius;
