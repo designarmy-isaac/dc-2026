@@ -54,27 +54,27 @@
     </div>
 
     <form data-abide novalidate action="/process.php" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="cell small-12 medium-6 large-5 large-offset-1" target="_blank">
-      <label for="mce-FNAME"><span class="special-label">First Name  <span class="asterisk">*</span></span>
+      <label for="mce-FNAME"><span class="special-label">{{first-name-label}}  <span class="asterisk">*</span></span>
         <input type="text" value="" name="FNAME" placeholder="Eddie" class="required" id="mce-FNAME" pattern="text" required>
         <span class="form-error">{{first-name-error}}</span>
       </label>
 
-      <label for="mce-LNAME"><span class="special-label">Last Name  <span class="asterisk">*</span></span>
+      <label for="mce-LNAME"><span class="special-label">{{last-name-label}}  <span class="asterisk">*</span></span>
         <input type="text" value="" name="LNAME" placeholder="Pope" class="required" id="mce-LNAME" pattern="text" required>
         <span class="form-error">{{last-name-error}}</span>
       </label>
 
-      <label for="mce-EMAIL"><span class="special-label">Email Address  <span class="asterisk">*</span></span>
+      <label for="mce-EMAIL"><span class="special-label">{{email-label}}  <span class="asterisk">*</span></span>
         <input type="email" value="" name="EMAIL" placeholder="eddie@dc2026.org" class="required email" id="mce-EMAIL" pattern="email" required>
         <span class="form-error">{{email-error}}</span>
       </label>
 
-      <label for="mce-ZIP"><span class="special-label">Zip Code  <span class="asterisk">*</span></span>
+      <label for="mce-ZIP"><span class="special-label">{{zip-code-label}}  <span class="asterisk">*</span></span>
         <input type="text" value="" name="ZIP" placeholder="20515" class="required" id="ZIP" pattern="zip" required>
         <span class="form-error">{{zip-code-error}}</span>
       </label>
 
-      <label for="mce-PHONE"><span class="special-label">Phone Number</span>
+      <label for="mce-PHONE"><span class="special-label">{{phone-number-label}}</span>
         <input type="text" name="PHONE" placeholder="1 (202) 123-4567" class="" value="" id="mce-PHONE" pattern="phone">
         <span class="form-error">{{phone-error}}</span>
       </label>
