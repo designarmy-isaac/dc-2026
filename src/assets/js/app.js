@@ -31,6 +31,7 @@ function fn() {
   AOS.init({
     duration: 400,
     easing: 'ease-out-sine',
+		once: true
 //    delay: 100,
 //    disable: 'mobile',
   });
@@ -150,31 +151,45 @@ $('[data-reveal]').on('open.zf.reveal', function () {
     if ( ev.target.id == 'mc-embedded-subscribe-form') {
       var submitVal = $('#mc-embedded-subscribe').val();      
       $.ajax({
-        url: '/process.php',
+        url: 'process.php',
         type: 'POST',
         data: $('#mc-embedded-subscribe-form').serialize(),
         beforeSend: function() {
           $('#mc-embedded-subscribe').prop('disabled', true).val("Sending...");
         },        
         success: function(response, status, xhr) {
+					console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+											'xhr.status = '+xhr.status+ '\n' +
+											'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+											'status = '+status+ '\n' +
+											'response = '+response);
           if(response == 200) {
-            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-                        'xhr.status = '+xhr.status+ '\n' +
-                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-                        'status = '+status+ '\n' +
-                        'response = '+response);
+//						console.log("200");
             $('#mc-embedded-subscribe-form').hide();
             $('#signup-header').hide();
             $('.signup-error').hide();
             $('.signup-success').show();
           } else {
-            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-                        'xhr.status = '+xhr.status+ '\n' +
-                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-                        'status = '+status+ '\n' +
-                        'response = '+response);
+//						console.log("else");
             $('.signup-error').show();
-          }
+						$('.error-paragraph').hide();
+						switch (response) {
+							case 0:
+//								console.log("switch case 0")
+								$('#error-paragraph-connection').show();
+								break;
+							case 400:
+//								console.log("switch case 400")
+								$('#error-paragraph-400').show();
+								break;
+							case 500:
+//								console.log("switch case 500")
+								$('#error-paragraph-500').show();
+								break;
+							default:
+								$('#error-paragraph').show();
+						};
+					}
         },
         error: function(xhr, status, error) {
           console.log('xhr.responseText = '+xhr.responseText+ '\n' +
@@ -183,6 +198,8 @@ $('[data-reveal]').on('open.zf.reveal', function () {
                       'status = '+status+ '\n' +
                       'error = '+error);
           $('.signup-error').show();
+					$('.error-paragraph').hide();
+					$('#error-paragraph-connection').show();
         },
         complete: function() {
           $('#mc-embedded-subscribe').prop('disabled', false).val(submitVal);
@@ -196,7 +213,7 @@ $('[data-reveal]').on('open.zf.reveal', function () {
       $.ajax({
         type: "POST",
         async: true,
-        url: "/contact.php",
+        url: "contact.php",
         data: datap,
         datatype: 'json',
         cache: true,
@@ -210,10 +227,14 @@ $('[data-reveal]').on('open.zf.reveal', function () {
                       'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
                       'status = '+status+ '\n' +
                       'response = '+response);
-          $('#c-form').hide();
-          $('#contact-header').hide();
-          $('.contact-error').hide();
-          $('.contact-success').show();
+					if (response.indexOf('Message has been sent') >= 0 ) {
+						$('#c-form').hide();
+						$('#contact-header').hide();
+						$('.contact-error').hide();
+						$('.contact-success').show();
+					} else {
+						$('.contact-error').show();
+					}
         },
         error: function(xhr, status, error) {
           console.log('xhr.responseText = '+xhr.responseText+ '\n' +
@@ -228,96 +249,5 @@ $('[data-reveal]').on('open.zf.reveal', function () {
         }
       });
     }
-//      window.alert('c-form');
-//      $.ajax({
-//        url: '//localhost/dc-2026/dist/contact.php',
-//        type: 'POST',
-//        data: $('#c-form').serialize(),
-//        success: function(response, status, xhr) {
-//          if(response == 200) {
-//            window.alert('Success criteria met');
-//            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-//                        'xhr.status = '+xhr.status+ '\n' +
-//                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-//                        'status = '+status+ '\n' +
-//                        'response = '+response);
-//            $('#mc-embedded-subscribe-form').hide();
-//            $('#signup-header').hide();
-//            $('.signup-success').show();
-//          } else {
-//            window.alert('Success criteria met, but 200 not returned');
-//            console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-//                        'xhr.status = '+xhr.status+ '\n' +
-//                        'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-//                        'status = '+status+ '\n' +
-//                        'response = '+response);
-//            $('.signup-error').addClass('show');
-//          }
-//        },
-//        error: function(xhr, status, error) {
-//          window.alert('Error criteria met.');
-//          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-//                      'xhr.status = '+xhr.status+ '\n' +
-//                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-//                      'status = '+status+ '\n' +
-//                      'error = '+error);
-//          $('.signup-error').addClass('show');
-//        }
-//      });
-//    }
   });
-//  
-//  
-//  $('.sign-up').validate({
-//    highlight: function(element, errorClass) {
-//      $(element).parent().addClass(errorClass);
-////      console.log('highlight');
-//    },
-//    unhighlight: function(element, errorClass) {
-//      $(element).parent().removeClass(errorClass);
-////      console.log('unhighlight');
-//    },
-//    submitHandler: function(form, event) {
-////      console.log('submit');
-//      event.preventDefault();
-//      $.ajax({
-//        url: '/process.php',
-//        type: 'POST',
-//        data: $(form).serialize(),
-//        success: function(response) {
-//          if(response === 200) {
-////            console.log('success');
-//            var height = $('.sign-up').height();
-//            $('.sign-up').height(height);
-//            $('.sign-up .form-controls').addClass('done');
-//            $('.sign-up .success-message').addClass('show');
-//            $('.sign-up .error-message').removeClass('show');
-//          } else {
-//            $('.sign-up .error-message').addClass('show');
-//          }
-//        },
-//        error: function() {
-//          $('.sign-up .error-message').text('Error! Try again');
-//        }
-//      });
-//      return false;
-//    },
-//    // all fields are required
-//    rules: {
-//      subscribe_email: {
-//        required: true,
-//        email: true,
-//      }
-//    }
-//  });
-//  $('form').foundation('enableValidation');
-//  $(document).on("formvalid.zf.abide", function(ev,frm) {pushSubmit();});
-//  var dataLocation = $('[data-origin="true"]').data("location"); //grabs the location value from the button that originated the modal opening
-//  selectionListener();
-//  var selectedLocation = $("[data-location-option='" + dataLocation + "']");
-//  selectedLocation.prop("selected", "selected"); // set location to selected
-//  $('[data-origin="true"]').attr("data-origin", "false"); // reset originating button
-
-  
-  // sign-up form
 }
