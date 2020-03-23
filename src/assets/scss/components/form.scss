@@ -9,14 +9,14 @@
   text-transform: uppercase;
 }
 
-.special-label label {
+.special-label {
   font-size: rem-calc(14px);
   font-weight: bold;
   background: $white;
   position: relative;
   display: inline-block;
   top: rem-calc(14px);
-  left: rem-calc(10px);
+  left: rem-calc(8px);
   padding: 2px;
 }
 
@@ -32,10 +32,13 @@ select {
   outline: none;
   box-shadow: none;
   height: rem-calc(48px);
+	padding-top: .8rem;
 }
 textarea {
   border: 1px solid $primary-color;
   border-radius: 2px;
+	padding-top: .8rem;
+	line-height: 1.25;
   outline: none;
   box-shadow: none;
   resize: vertical;

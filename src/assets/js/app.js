@@ -31,7 +31,7 @@ function fn() {
   AOS.init({
     duration: 400,
     easing: 'ease-out-sine',
-		once: true
+		once: true,
 //    delay: 100,
 //    disable: 'mobile',
   });

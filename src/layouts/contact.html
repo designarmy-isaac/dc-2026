@@ -1,13 +1,13 @@
 <div class="modal">
   <div class="grid-x grid-padding-x">
     <div class="cell small-12">
-      <button type="button" data-close aria-label="Close" class="close-modal clear button float-right"><i class="fas fa-times"></i></button>
+      <button type="button" data-close aria-label="Close" class="close-modal clear button float-right"></button>
     </div>
-    <div class="cell small-12 contact-success">
+    <div class="cell small-12 medium-10 medium-offset-1 contact-success">
       <h2 class="huge">{{thank-you-header}}</h2>
       <p>{{thank-you-paragraph}} </p>
     </div>
-    <div class="cell small-12 large-6 m-b-3 contact-success">
+    <div class="cell small-12 medium-10 medium-offset-1 large-5 m-b-3 contact-success">
       <h2 class="h1 p-b-1">{{follow-header}}</h2>
       <p class="m-b-2">{{follow-paragraph}}</p>
       <div>
@@ -16,7 +16,7 @@
         <a href="https://www.instagram.com/dc2026/" class="follow-button"><i class="follow-icon fab fa-instagram"></i></a>
       </div>
     </div>
-    <div class="cell small-12 large-5" id="contact-header">
+    <div class="cell small-12 medium-10 medium-offset-1 large-4" id="contact-header">
       <h2 class="h1 p-b-1">{{header}}</h2>
       <p>{{paragraph}}</p>
 			<div class="contact-error">
@@ -24,12 +24,12 @@
 				<p>{{error-paragraph}}</p>
 			</div>
     </div>
-    <form data-abide novalidate id="c-form" class="cell small-12 large-7" method="post" action="contact.php">
-      <label for="c-EMAIL">{{email-label}}
+    <form data-abide novalidate id="c-form" class="cell small-12 medium-10 medium-offset-1 large-5" method="post" action="contact.php">
+      <label for="c-EMAIL"><span class="special-label">{{email-label}}</span>
         <input type="email" value="" name="EMAIL" placeholder="eddie@dc2026.org" class="required email" id="c-EMAIL" pattern="email" required>
         <span class="form-error">{{email-error}}</span>
       </label>
-      <label for="c-SUBJECT">{{email-subject-label}}
+      <label for="c-SUBJECT"><span class="special-label">{{email-subject-label}}</span>
         <select name="SUBJECT" class="required" required>
           {{#each email-subjects}}
           <option value="{{ this }}">{{ this }}</option>
@@ -37,7 +37,7 @@
         </select>
         <span class="form-error">{{subject-error}}</span>
       </label>
-      <label for="c-BODY">{{message-label}}
+      <label for="c-BODY"><span class="special-label">{{message-label}}</span>
         <textarea name="BODY" class="required" id="c-BODY" maxlength="1000" cols="25" rows="6" required></textarea>
         <span class="form-error">{{message-error}}</span>
       </label>

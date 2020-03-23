@@ -2,7 +2,45 @@
   padding-bottom: 3rem;
 }
 
+.close-modal {
+	height: 2.5rem;
+	width: 2.5rem;
+	padding: 0;
+	margin: 0 -1rem 0 0;
+	position: relative;
+	border-radius: 0;
+	&:after, &:before {
+		content: '';
+		display: inline-block;
+		width: 2.5rem;
+		height: 2.5px;
+		position: absolute;
+		background: $primary-color;
+		margin: 0;
+		padding: 0;
+		left: -1px;
+		top: 1.2rem;
+	}
+	&:before {
+		transform: rotate(45deg);
+	}
+	&:after {
+		transform: rotate(135deg);
+	}
+}
+
 .signup-error,
 .contact-error {
 	color: $secondary-color;
+}
+
+@include breakpoint(medium) {
+	#signup-header {
+		padding-top: 3rem;
+	}
+}
+@include breakpoint(large) {
+	#contact-header {
+		padding-top: 3rem;
+	}
 }
