@@ -286,6 +286,7 @@ nav {
     cursor: default;
   }
   @include breakpoint(medium) {
+		position: absolute;
     top: 0; bottom: auto;
     background: none;
     padding: 1rem;
