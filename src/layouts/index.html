@@ -60,7 +60,23 @@
   </head>
   <body class="no-js">
 <!--    <script>document.body.className += ' fade'</script>-->
-    {{> no-script-analytics}}
+    <script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId            : '223348358811580',
+					autoLogAppEvents : true,
+					xfbml            : true,
+					version          : 'v6.0'
+				});
+			};
+		</script>
+		{{#ifequal lang "en"}}
+			<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+		{{/ifequal}}
+		{{#ifequal lang "es"}}
+			<script async defer src="https://connect.facebook.net/es_LA/sdk.js"></script>
+		{{/ifequal}}
+		{{> no-script-analytics}}
     {{> body}}
     
     <section id="section-hero" class="grid-container">
@@ -292,7 +308,16 @@
                 </div>
               </div>
               <div class="cell small-6" data-aos="fade">
-                <a href="#" class="share-cta" id="cta-facebook" data-share-channel="facebook"><i class="share-cta-icon fab fa-facebook-f"></i>{{share-cta-facebook}}</a><br>
+                <a href="" class="share-cta" id="cta-facebook" data-share-channel="facebook"><i class="share-cta-icon fab fa-facebook-f"></i>{{share-cta-facebook}}</a><br>
+								<script>
+									document.getElementById('cta-facebook').onclick = function(e) {
+										FB.ui({
+											display: 'popup',
+											method: 'share',
+											href: 'http://staging.dc2026.org',
+										}, function(response){});
+									}
+								</script>
                 <a href="#" class="share-cta" id="cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
                 <a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>
                <a href="#" class="share-cta" id="cta-whatsapp" data-share-channel="whatsapp"> <i class="share-cta-icon fab fa-whatsapp"></i>{{share-cta-whatsapp}}</a>

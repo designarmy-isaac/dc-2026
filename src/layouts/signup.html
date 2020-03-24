@@ -16,16 +16,25 @@
           <p>{{next-step-paragraph}}</p>
         </div>
         <div class="cell small-6">
-          <a href="#" class="share-cta" id="cta-facebook" data-share-channel="facebook"><i class="share-cta-icon fab fa-facebook-f"></i>{{share-cta-facebook}}</a><br>
-          <a href="#" class="share-cta" id="cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
-          <a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>
-          <a href="#" class="share-cta" id="cta-whatsapp" data-share-channel="whatsapp"> <i class="share-cta-icon fab fa-whatsapp"></i>{{share-cta-whatsapp}}</a>
+          <a href="" class="share-cta" id="ty-cta-facebook" data-share-channel="facebook"><i class="share-cta-icon fab fa-facebook-f"></i>{{share-cta-facebook}}</a>
+					<script>
+						document.getElementById('ty-cta-facebook').onclick = function(e) {
+							FB.ui({
+								display: 'popup',
+								method: 'share',
+								href: 'http://staging.dc2026.org',
+							}, function(response){});
+						}
+					</script><br>
+          <a href="#" class="share-cta" id="ty-cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
+          <a href="#" class="share-cta" id="ty-cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>
+          <a href="#" class="share-cta" id="ty-cta-whatsapp" data-share-channel="whatsapp"> <i class="share-cta-icon fab fa-whatsapp"></i>{{share-cta-whatsapp}}</a>
         </div>
         <div class="cell small-6">
-          <a href="#" class="share-cta" id="cta-linkedin" data-share-channel="linkedin"><i class="share-cta-icon fab fa-linkedin"></i>{{share-cta-linkedin}}</a><br>
-          <a href="#" class="share-cta" id="cta-messenger" data-share-channel="messenger"><i class="share-cta-icon fab fa-facebook-messenger"></i>{{share-cta-messenger}}</a><br>
-          <a href="#" class="share-cta" id="cta-sms" data-share-channel="sms"><i class="share-cta-icon far fa-comment"></i>{{share-cta-sms}}</a><br>
-          <a href="#" class="share-cta" id="cta-email" data-share-channel="email"><i class="share-cta-icon far fa-envelope"></i>{{share-cta-email}}</a>
+          <a href="#" class="share-cta" id="ty-cta-linkedin" data-share-channel="linkedin"><i class="share-cta-icon fab fa-linkedin"></i>{{share-cta-linkedin}}</a><br>
+          <a href="#" class="share-cta" id="ty-cta-messenger" data-share-channel="messenger"><i class="share-cta-icon fab fa-facebook-messenger"></i>{{share-cta-messenger}}</a><br>
+          <a href="#" class="share-cta" id="ty-cta-sms" data-share-channel="sms"><i class="share-cta-icon far fa-comment"></i>{{share-cta-sms}}</a><br>
+          <a href="#" class="share-cta" id="ty-cta-email" data-share-channel="email"><i class="share-cta-icon far fa-envelope"></i>{{share-cta-email}}</a>
         </div>
       </div>
     </div>
