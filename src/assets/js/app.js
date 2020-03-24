@@ -151,7 +151,7 @@ $('[data-reveal]').on('open.zf.reveal', function () {
     if ( ev.target.id == 'mc-embedded-subscribe-form') {
       var submitVal = $('#mc-embedded-subscribe').val();      
       $.ajax({
-        url: 'process.php',
+        url: '/process.php',
         type: 'POST',
         data: $('#mc-embedded-subscribe-form').serialize(),
         beforeSend: function() {
@@ -213,7 +213,7 @@ $('[data-reveal]').on('open.zf.reveal', function () {
       $.ajax({
         type: "POST",
         async: true,
-        url: "contact.php",
+        url: "/contact.php",
         data: datap,
         datatype: 'json',
         cache: true,
