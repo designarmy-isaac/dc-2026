@@ -12,14 +12,14 @@ $body = $_REQUEST['BODY'];
 
 try {
     // Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-    $mail->isSMTP();
-    $mail->Host       = '<%-mailhost-%>';
-    $mail->SMTPAuth   = <%-mailauth-%>;
-    $mail->Username   = '<%-mailuser-%>';
-    $mail->Password   = '<%-mailpw-%>';
-    $mail->SMTPSecure = <%-mailsecure-%>;
-    $mail->Port       = <%-mailport-%>;
+		$mail->SMTPDebug		= SMTP::DEBUG_SERVER; 
+		$mail->isSMTP();                       
+		$mail->Host       	= 'localhost';       
+		$mail->SMTPAuth   	= false;             
+		$mail->SMTPAutoTLS	= false;
+		$mail->Port       	= 25;
+		$mail->SMTPOptions	= array("ssl" => array("verify_peer" => false, "verify_peer_name" => false, "allow_self_signed" => true));
+	
 
     //Recipients
     $mail->setFrom('webform@dc2026.org', 'dc2026.org Webform');

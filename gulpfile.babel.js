@@ -69,12 +69,12 @@ function php() {
   return gulp.src('src/pages/**/*.php')
 	.pipe($.if(PRODUCTION, replace(/<%-[A-z]*-%>/g, function(replacement) { // replace <%-keys-%> with env variables
 		var key = replacement.match(/(?<=<%-)(.*)(?=-%>)/g),
-				{ mckey, mailhost, mailuser, mailpw, mailauth, mailautotls, mailsecure, mailport, } = env.prod;
+				{ mckey, maildebug, mailhost, mailport, mailauth, mailautotls, mailsecure, mailuser, mailpw, mailoptions} = env.prod;
 		return eval(key[0]);
 	})))
 	.pipe($.if(!PRODUCTION, replace(/<%-[A-z]*-%>/g, function(replacement) {
 		var key = replacement.match(/(?<=<%-)(.*)(?=-%>)/g),
-				{ mckey, mailhost, mailuser, mailpw, mailauth, mailautotls, mailsecure, mailport, } = env.dev;
+				{ mckey, maildebug, mailhost, mailport, mailauth, mailautotls, mailsecure, mailuser, mailpw, mailoptions} = env.dev;
 		return eval(key[0]);
 	})))
   .pipe(gulp.dest(PATHS.dist));
