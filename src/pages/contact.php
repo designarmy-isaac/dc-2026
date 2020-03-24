@@ -12,13 +12,13 @@ $body = $_REQUEST['BODY'];
 
 try {
     // Server settings
-		$mail->SMTPDebug		= SMTP::DEBUG_SERVER; 
+		$mail->SMTPDebug		= <%-maildebug-%>; 
 		$mail->isSMTP();                       
-		$mail->Host       	= 'localhost';       
-		$mail->SMTPAuth   	= false;             
-		$mail->SMTPAutoTLS	= false;
-		$mail->Port       	= 25;
-		$mail->SMTPOptions	= array("ssl" => array("verify_peer" => false, "verify_peer_name" => false, "allow_self_signed" => true));
+		$mail->Host       	= '<%-mailhost-%>';       
+		$mail->SMTPAuth   	= <%-mailauth-%>;             
+		$mail->SMTPAutoTLS	= <%-mailautotls-%>;
+		$mail->Port       	= <%-mailport-%>;
+		$mail->SMTPOptions	= <%-mailoptions-%>;
 	
 
     //Recipients
