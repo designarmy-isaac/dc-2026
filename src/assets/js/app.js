@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import 'what-input';
-//import validate from 'jquery-validation';
-//import 'jquery-modal';
+import './lib/plinks';
+
+
 
 // Foundation JS relies on a global varaible. In ES6, all imports are hoisted
 // to the top of the file so if we used`import` to import Foundation,
@@ -9,11 +10,8 @@ import 'what-input';
 // This is why we have to use CommonJS require() here since it doesn't
 // have the hoisting behavior.
 window.jQuery = $;
-require('foundation-sites');
-
-// If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
-//import './lib/foundation-explicit-pieces';
+//require('foundation-sites');
+import './lib/foundation-explicit-pieces';
 
 $(document).ready( fn );
 
@@ -36,6 +34,7 @@ function fn() {
 //    disable: 'mobile',
   });
     
+
 /* ===================================
 ====================================== TABS
 =================================== */
@@ -117,6 +116,25 @@ function fn() {
     showPost(eChannel);
   });
   
+	
+/* ===================================
+====================================== SOCIAL SHARING
+=================================== */  
+
+	var whatsappText	= $('#whatsapp-text').text(),
+			smsText				= $('#sms-text').text(),
+			emailSubj			= $('#email-subject').text(),
+			emailText			=	$('#email-text').text(),
+			linkedinText	= $('#linkedin-text').text(),
+			twitterText		= $('#twitter-text').text();
+	
+	$('.cta-sms').attr("href", plinks.smsLink(smsText));
+	$('.cta-whatsapp').attr("href", plinks.whatsAppLink(whatsappText));
+	$('.cta-email').attr("href", plinks.emailLink(emailSubj, emailText));
+	$('.cta-linkedin').attr("href", plinks.linkedinLink(linkedinText));
+	$('.cta-twitter').attr("href", plinks.twitterLink(twitterText));
+
+	
 /* ===================================
 ====================================== FORMS
 =================================== */
@@ -158,11 +176,11 @@ $('[data-reveal]').on('open.zf.reveal', function () {
           $('#mc-embedded-subscribe').prop('disabled', true).val("Sending...");
         },        
         success: function(response, status, xhr) {
-					console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-											'xhr.status = '+xhr.status+ '\n' +
-											'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-											'status = '+status+ '\n' +
-											'response = '+response);
+//					console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+//											'xhr.status = '+xhr.status+ '\n' +
+//											'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+//											'status = '+status+ '\n' +
+//											'response = '+response);
           if(response == 200) {
 //						console.log("200");
             $('#mc-embedded-subscribe-form').hide();
@@ -192,11 +210,11 @@ $('[data-reveal]').on('open.zf.reveal', function () {
 					}
         },
         error: function(xhr, status, error) {
-          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-                      'xhr.status = '+xhr.status+ '\n' +
-                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-                      'status = '+status+ '\n' +
-                      'error = '+error);
+//          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+//                      'xhr.status = '+xhr.status+ '\n' +
+//                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+//                      'status = '+status+ '\n' +
+//                      'error = '+error);
           $('.signup-error').show();
 					$('.error-paragraph').hide();
 					$('#error-paragraph-connection').show();
@@ -222,11 +240,11 @@ $('[data-reveal]').on('open.zf.reveal', function () {
           $('#c-SUBMIT').prop('disabled', true).val("Sending...");
         },
         success: function(response, status, xhr) {
-          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-                      'xhr.status = '+xhr.status+ '\n' +
-                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-                      'status = '+status+ '\n' +
-                      'response = '+response);
+//          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+//                      'xhr.status = '+xhr.status+ '\n' +
+//                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+//                      'status = '+status+ '\n' +
+//                      'response = '+response);
 					if (response.indexOf('Message has been sent') >= 0 ) {
 						$('#c-form').hide();
 						$('#contact-header').hide();
@@ -237,11 +255,11 @@ $('[data-reveal]').on('open.zf.reveal', function () {
 					}
         },
         error: function(xhr, status, error) {
-          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-                      'xhr.status = '+xhr.status+ '\n' +
-                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-                      'status = '+status+ '\n' +
-                      'error = '+error);
+//          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+//                      'xhr.status = '+xhr.status+ '\n' +
+//                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+//                      'status = '+status+ '\n' +
+//                      'error = '+error);
           $('.contact-error').show();
         },
         complete: function() {

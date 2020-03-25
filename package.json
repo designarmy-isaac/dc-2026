@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "foundation-sites": "~6.4.1",
+    "foundation-sites": "^6.5.1",
     "gulp-brotli": "^1.2.1",
     "gulp-string-replace": "^1.1.2",
     "jquery": "^3.4.1",
