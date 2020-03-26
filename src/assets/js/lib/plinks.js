@@ -47,7 +47,7 @@ window.plinks = (function() {
 	
 	exports.twitterLink = function(message) {
 		var msg = encodeURIComponent(message), href;
-		href = "https://twitter.com/intent/tweet?hashtags=DC2026&original_referer=http%3A%2F%2Fdc2026.org%2F&ref_src=twsrc%5Etfw&related=DC2026&text=" + msg + "&tw_p=tweetbutton";
+		href = "https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fdc2026.org%2F&ref_src=twsrc%5Etfw&related=DC2026&text=" + msg + "&tw_p=tweetbutton";
 		
 		return href
 	}
