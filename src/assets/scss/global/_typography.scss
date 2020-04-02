@@ -60,6 +60,7 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .lead {
   text-transform: uppercase;
   font-weight: bold;
+	letter-spacing: 0.75px;
   @include breakpoint(medium) {
     font-size: rem-calc(26px);
   }
