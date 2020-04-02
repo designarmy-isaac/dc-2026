@@ -24,6 +24,10 @@ input.button.large:hover {
   padding: 2px;
 }
 
+.form-error.is-visible {
+	position: absolute;
+}
+
 .is-invalid-input {
 	border-color: $secondary-color !important;
 }
@@ -41,6 +45,7 @@ select {
   box-shadow: none;
   height: rem-calc(48px);
 	padding-top: .8rem;
+	margin-bottom: .75rem;
 }
 textarea {
   border: 1px solid $primary-color;
