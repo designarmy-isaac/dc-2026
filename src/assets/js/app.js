@@ -146,8 +146,13 @@ $('.signup-opener').on('click', function() {
       $('#modal').html(content).foundation('open');
       var dataIntent = $('[data-origin="true"]').data("intent"); //grabs the intent value from the button that originated the modal opening
       if ( dataIntent === 'volunteer') {
+				$('.pledge-content').addClass('hide');
+				$('.volunteer-content').removeClass('hide');
         $('[data-receive="intent"]').prop("checked", true); // set volunteer checkbox to checked
-      }
+      } else {
+				$('.volunteer-content').addClass('hide');
+				$('.pledge-content').removeClass('hide');
+			}
       $('[data-origin="true"]').attr("data-origin", "false"); // reset originating button
   });
 });

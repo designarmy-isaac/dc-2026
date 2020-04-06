@@ -58,11 +58,16 @@
         </div>
     </div>
     <div id="signup-header" class="cell small-12 medium-offset-1 medium-4">
-      <div class="header-group">
-        <h2 class="h1">{{header}}</h2>
-        <h3 class="h2">{{subheader}}</h3>
+      <div class="header-group pledge-content">
+        <h2 class="h1">{{pledge-header}}</h2>
+        <h3 class="h2">{{pledge-subheader}}</h3>
       </div>
-      <p>{{paragraph}}</p>
+      <p class="pledge-content">{{pledge-paragraph}}</p>
+			<div class="header-group volunteer-content hide">
+        <h2 class="h1">{{volunteer-header}}</h2>
+        <h3 class="h2">{{volunteer-subheader}}</h3>
+      </div>
+      <p class="volunteer-content hide">{{volunteer-paragraph}}</p>
 			<div class="signup-error">
 				<h2>{{error-header}}</h2>
 				<p id="error-paragraph" class="error-paragraph">{{error-paragraph}}</p>
