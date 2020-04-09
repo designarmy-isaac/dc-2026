@@ -371,7 +371,7 @@ nav {
 #share-background {
   background-position: left;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
 }
 
 #section-share {
@@ -581,7 +581,7 @@ nav {
 ====================================== DOWNLOAD
 =================================== */
 
-#section-media {
+#section-media, #section-media .grid-container {
   position: relative;
 }
 
@@ -621,8 +621,9 @@ nav {
 }
 
 #media-graphic-pattern {
+	position: absolute;
   bottom: -5rem;
-  left: 25%;
+  right: 25%;
   width: 125%;
   max-width: 1350%;
   height: auto;
@@ -632,7 +633,10 @@ nav {
   }
   @include breakpoint(large) {
     width: 80%;
-    bottom: 0;
+    bottom: -5%;
+		left: auto;
+		right: 0;
+		max-width: 1022px;
   }
 }
 
