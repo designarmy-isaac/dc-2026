@@ -263,19 +263,19 @@ body {
 
 #hero-graphic-caption {
 	position: absolute;
-	top: 68%;
-	left: 43%;
+	top: 66%;
+	left: 35%;
 	width: 25%;
 	p {
 		max-width: 10rem;
 	}
 	@include breakpoint(large) {
-		top: 73%;
-		left: 45%;
+		top: 68%;
+		left: 43%;
 	}
 	@include breakpoint(xxlarge) {
-		top: 70%;
-		left: 49%;
+		top: 69%;
+		left: 43%;
 	}
 }
 
@@ -704,7 +704,7 @@ nav {
 	@include breakpoint(xlarge) {
 		bottom: auto;
 		top: 40%;
-		right: 15%;
+		right: 18%;
 	}
 }
 
