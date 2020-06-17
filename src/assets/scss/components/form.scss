@@ -85,6 +85,11 @@ input[type=checkbox] {
     left: .75rem;
     transform: rotate(45deg);
   }
+	&:focus {
+		&:before {
+			outline: 3px solid grey;
+		}
+	}
 }
 
 .checkbox-label {

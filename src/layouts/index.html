@@ -113,6 +113,9 @@
           <source srcset="{{root}}assets/img/DC2026-header_banner-md.png" media="(min-width: 640px)"> 
           <img src="{{root}}assets/img/DC2026-header_banner-sm.png" alt="United by the Game" id="hero-graphic-banner" data-aos="fade" data-aos-delay="800" data-aos-duration="400">
         </picture>
+				<div id="hero-graphic-caption" class="show-for-medium">
+					<p class="caption"><strong>{{ intro-athlete-name }}</strong><br>{{ intro-athlete-title }}</p>
+				</div>
       </div>
     </section>
     
@@ -144,7 +147,7 @@
           </div>
           <picture data-aos="fade">
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
-            <img alt="{{tab1-image-alt}}"  src="{{root}}assets/img/DC2026-Nation_Flags_at_the_Kennedy_Center-sm.jpg">
+            <img alt="{{tab1-image-alt}}"  src="{{root}}assets/img/DC2026-cherry_blossoms-sm.jpg">
           </picture>
           <div class="m-t-2" data-aos="fade">{{#markdown}}{{tab1-content}}{{/markdown}}</div>
         </div>
@@ -155,7 +158,7 @@
           </div>
           <picture data-aos="fade">
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
-            <img alt="{{tab2-image-alt}}" src="{{root}}assets/img/DC2026-The_National_Mall-sm.jpg">
+            <img alt="{{tab2-image-alt}}" src="{{root}}assets/img/DC2026-July_4_fireworks-sm.jpg">
           </picture>
           <div class="m-t-2" data-aos="fade">{{#markdown}}{{tab2-content}}{{/markdown}}</div>
         </div>
@@ -166,7 +169,7 @@
           </div>
           <picture data-aos="fade">
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
-            <img alt="{{tab3-image-alt}}" src="{{root}}assets/img/DC2026-Real_Madrid_vs_Juventus_Field-sm.jpg">
+            <img alt="{{tab3-image-alt}}" src="{{root}}assets/img/DC2026-DC_Scores-sm.jpg">
           </picture>
           <div class="m-t-2" data-aos="fade">{{#markdown}}{{tab3-content}}{{/markdown}}</div>
         </div>
@@ -188,15 +191,15 @@
         <div id="tab-image-container" class="cell small-12 large-3">
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(max-width: 959px)"> 
-            <img alt="{{tab1-image-alt}}" data-tab-image-number="1" class="tab-image" src="{{root}}assets/img/DC2026-Nation_Flags_at_the_Kennedy_Center-lg.jpg" data-aos="fade-up">
+            <img alt="{{tab1-image-alt}}" data-tab-image-number="1" class="tab-image" src="{{root}}assets/img/DC2026-cherry_blossoms-lg.jpg" data-aos="fade-up">
           </picture>
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(max-width: 959px)"> 
-            <img alt="{{tab2-image-alt}}" data-tab-image-number="2" class="tab-image hide" src="{{root}}assets/img/DC2026-The_National_Mall-lg.jpg" data-aos="fade-up">
+            <img alt="{{tab2-image-alt}}" data-tab-image-number="2" class="tab-image hide" src="{{root}}assets/img/DC2026-July_4_fireworks-lg.jpg" data-aos="fade-up">
           </picture>
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(max-width: 959px)"> 
-            <img alt="{{tab3-image-alt}}" data-tab-image-number="3" class="tab-image hide" src="{{root}}assets/img/DC2026-Real_Madrid_vs_Juventus_Field-lg.jpg" data-aos="fade-up">
+            <img alt="{{tab3-image-alt}}" data-tab-image-number="3" class="tab-image hide" src="{{root}}assets/img/DC2026-DC_Scores-lg.jpg" data-aos="fade-up">
           </picture>
         </div>
         <div id="tab-content-container" class="cell small-12 large-5">
@@ -348,13 +351,16 @@
 			<div class="grid-container">
 				<div id="media-graphics">
 					<picture>
-	<!--          <source srcset="{{root}}assets/img/DC2026-Mia_Hamm_silhouette-lg.png" media="(min-width: 960px)"> -->
-						<img src="{{root}}assets/img/DC2026-Mia_Hamm_silhouette-sm.png" alt="" id="media-graphic-silhouette" data-aos="fade-right">
+	<!--          <source srcset="{{root}}assets/img/DC2026-Briana_Scurry_silhouette-lg.png" media="(min-width: 960px)"> -->
+						<img src="{{root}}assets/img/DC2026-Briana_Scurry_silhouette-sm.png" alt="" id="media-graphic-silhouette" data-aos="fade-right">
 					</picture>
 					<picture>
-						<source srcset="{{root}}assets/img/DC2026-Mia_Hamm-lg.png" media="(min-width: 960px)"> 
-						<img src="{{root}}assets/img/DC2026-Mia_Hamm-sm.png" alt="{{ media-athlete-image-alt }}" id="media-graphic-athlete" data-aos="fade-right" data-aos-delay="200">
+<!--						<source srcset="{{root}}assets/img/DC2026-Briana_Scurry-lg.png" media="(min-width: 960px)"> -->
+						<img src="{{root}}assets/img/DC2026-Briana_Scurry-sm.png" alt="{{ media-athlete-image-alt }}" id="media-graphic-athlete" data-aos="fade-right" data-aos-delay="200">
 					</picture>
+					<div id="media-graphic-caption" class="show-for-medium">
+						<p class="caption"><strong>{{ media-athlete-name }}</strong><br>{{ media-athlete-title }}</p>
+					</div>
 				</div>
 				<div class="grid-x m-b-5">
 					<div class="cell small-10 medium-6 medium-offset-1 large-4 large-offset-0">
@@ -437,11 +443,6 @@
                 <p class="member-org-large">FedEx Corporation</p>
               </div>
               <div class="cell small-6 member-container" data-aos="fade">
-                <p class="member-title-large">Honorary Chair</p>
-                <p class="member-name-large">Ted Leonsis</p>
-                <p class="member-org-large">Monumental Sports &amp; Entertainment</p>
-              </div>
-              <div class="cell small-6 member-container" data-aos="fade">
                 <p class="member-title-large">Host Team</p>
                 <p class="member-name-large">Jason Levien</p>
                 <p class="member-org-large">D.C. United</p>
@@ -476,7 +477,11 @@
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Stephen Choi</p>
-                <p class="member-org">Washington Redskins /<br>FedExField</p>
+                <p class="member-org">Washington Redskins&nbsp;/<br>FedExField</p>
+              </div>
+							<div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
+                <p class="member-name">Monica Dixon</p>
+                <p class="member-org">Monumental Sports &amp; Entertainment</p>
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">John	Falcicchio</p>
@@ -512,7 +517,7 @@
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Joanna Lohman</p>
-                <p class="member-org">U.S. W. National Team / Washington Spirit</p>
+                <p class="member-org">U.S. W. National Team&nbsp;/ Washington Spirit</p>
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">LaRuby May</p>
@@ -568,7 +573,7 @@
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Briana Scurry</p>
-                <p class="member-org">Washington Spirit / National Soccer Hall of Fame</p>
+                <p class="member-org">Washington Spirit&nbsp;/ National Soccer Hall of Fame</p>
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Rudy Seikaly</p>
@@ -584,7 +589,7 @@
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Andi Sullivan</p>
-                <p class="member-org">U.S. W. National Team / Washington Spirit</p>
+                <p class="member-org">U.S. W. National Team&nbsp;/ Washington Spirit</p>
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Mark Weinberger</p>

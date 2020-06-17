@@ -47,11 +47,11 @@
 =================================== */
 
 .button.large span {
-	z-index: 600;
+	z-index: 500;
 }
 
 .signup-banner {
-  z-index: 500;
+  z-index: 550;
 }
 
 #language-nav {
@@ -259,6 +259,24 @@ body {
   @include breakpoint(large) {
     bottom: -10rem;
   }
+}
+
+#hero-graphic-caption {
+	position: absolute;
+	top: 68%;
+	left: 43%;
+	width: 25%;
+	p {
+		max-width: 10rem;
+	}
+	@include breakpoint(large) {
+		top: 73%;
+		left: 45%;
+	}
+	@include breakpoint(xxlarge) {
+		top: 70%;
+		left: 49%;
+	}
 }
 
 /* ===================================
@@ -641,17 +659,17 @@ nav {
 }
 
 #media-graphic-silhouette {
-  bottom: -2rem; 
-  left: 55%;
-  width: 43%;
+  bottom: -1rem; 
+  left: 57%;
+  width: 57%;
   height: auto;
   @include breakpoint(medium) {
-    width: 39%;
-    left: 64%;
+    width: 52%;
+    left: 60%;
   }
   @include breakpoint(large) {
-    top: -4rem; left: 53%; bottom: auto;
-    width: 30%;
+    top: -1rem; left: 56%; bottom: auto;
+    width: 39%;
   }
 }
 
@@ -661,13 +679,33 @@ nav {
   width: 60%;
   height: auto;
   @include breakpoint(medium) {
-    left: 63%;
+    left: 58%;
     width: 55%;
   }
   @include breakpoint(large) {
     top: -1rem; left: 53%; bottom: auto;
     width: 42%;
   }
+}
+
+#media-graphic-caption {
+	position: absolute;
+	right: 5%;
+	max-width: 25%;
+	bottom: 2%;
+	p {
+		max-width: 10rem;
+	}
+	@include breakpoint(large) {
+		bottom: auto;
+		top: 38%;
+		right: 17%;
+	}
+	@include breakpoint(xlarge) {
+		bottom: auto;
+		top: 40%;
+		right: 15%;
+	}
 }
 
 
