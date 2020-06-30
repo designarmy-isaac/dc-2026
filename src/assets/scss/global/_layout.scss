@@ -1,3 +1,7 @@
+html.is-reveal-open {
+	background-color: $primary-color;
+}
+
 /* ===================================
 ====================================== LAYOUT HELPER CLASSES
 =================================== */
@@ -450,6 +454,25 @@ nav {
     border-radius: .5rem;
   }
 }
+
+#post-facebook {
+	img {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	.og-content {
+		background: #ddd;
+		padding: .5rem .5rem 0;
+		margin-bottom: -1.5rem;
+		border-bottom-right-radius: .5rem;
+		border-bottom-left-radius: .5rem;
+		p {
+			padding-bottom: .5rem;
+		}
+	}
+	
+}
+
 #post-twitter {
   margin-top: 3rem;
 }

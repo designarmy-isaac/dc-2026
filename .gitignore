@@ -7,6 +7,9 @@ dist
 .cache
 .idea
 .php
-.htaccess
+.htaccess*
 .env
 vendor
+sitemap.xml
+.user.ini
+php_error.log

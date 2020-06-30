@@ -8,7 +8,7 @@ $mail = new PHPMailer(true);
 
 $email = $_REQUEST['EMAIL'];
 $subject = $_REQUEST['SUBJECT'];
-$body = $_REQUEST['BODY'];
+$body = $_REQUEST['BODY']; 
 
 try {
     // Server settings
@@ -23,7 +23,8 @@ try {
 
     //Recipients
     $mail->setFrom('webform@dc2026.org', 'dc2026.org Webform');
-    $mail->addAddress('isaac@designarmy.com');
+    $mail->addAddress('dc2026@eventsdc.com');
+		$mail->addCC('isaac@designarmy.com');
     $mail->addReplyTo($email);
 
 

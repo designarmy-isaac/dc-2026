@@ -54,7 +54,7 @@ window.plinks = (function() {
 	
 	exports.linkedinLink = function(message) {
 		var msg = encodeURIComponent(message), href;
-		href = "http://www.linkedin.com/shareArticle?mini=true&url=staging.dc2026.org&title=" + msg;
+		href = "http://www.linkedin.com/shareArticle?mini=true&url=dc2026.org&title=" + msg;
 
 		return href
 	}

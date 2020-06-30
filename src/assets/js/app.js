@@ -1,9 +1,6 @@
 import $ from 'jquery';
 import 'what-input';
-import './lib/plinks';
-
-
-
+import './lib/plinks';     
 // Foundation JS relies on a global varaible. In ES6, all imports are hoisted
 // to the top of the file so if we used`import` to import Foundation,
 // it would execute earlier than we have assigned the global variable.
@@ -165,7 +162,7 @@ $('.contact-opener').on('click', function() {
 });
 
 $('[data-reveal]').on('open.zf.reveal', function () {
-  var options = {liveUpdate: true, validateOnBlur: true},
+  var options = {liveValidate: true, validateOnBlur: true},
       form = new Foundation.Abide($('form'), options);
   });
   

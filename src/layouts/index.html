@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="{{lang}}">
+<html class="no-js" lang="{{lang}}">   
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,7 +23,7 @@
 		{{/ifequal}}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{meta-title}}">
-    <meta property="og:image" content="{{root}}assets/img/DC26_Share_Facebook.jpg">
+    <meta property="og:image" content="https://dc2026.org/assets/img/DC2026-og-img.jpg">
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="940">
     <meta property="og:image:height" content="788">
@@ -42,7 +42,7 @@
     <meta name="twitter:creator" content="@dc2026">
     <meta name="twitter:title" content="{{meta-title}}">
     <meta name="twitter:description" content="{{og-description}}">
-    <meta name="twitter:image" content="{{root}}assets/img/DC26_Share_Twitter.jpg">
+    <meta name="twitter:image" content="https://dc2026.org/assets/img/DC26_Share_Twitter.jpg">
     
 		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -72,22 +72,29 @@
   </head>
   <body class="no-js">
 <!--    <script>document.body.className += ' fade'</script>-->
-    <script>
-			window.fbAsyncInit = function() {
-				FB.init({
-					appId            : '223348358811580',
-					autoLogAppEvents : true,
-					xfbml            : true,
-					version          : 'v6.0'
-				});
-			};
-		</script>
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '223348358811580',
+				xfbml      : true,
+				version    : 'v7.0'
+			});
+			FB.AppEvents.logPageView();
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
 		{{#ifequal lang "en"}}
-			<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+			 js.src = "https://connect.facebook.net/en_US/sdk.js";
 		{{/ifequal}}
 		{{#ifequal lang "es"}}
-			<script async defer src="https://connect.facebook.net/es_LA/sdk.js"></script>
+			 js.src = "https://connect.facebook.net/es_LA/sdk.js";
 		{{/ifequal}}
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
 		{{> no-script-analytics}}
     {{> body}}
     
@@ -119,6 +126,7 @@
       </div>
     </section>
     
+    <main style="background:#141e46">
     <nav id="language-nav">
       {{#ifequal lang "en"}}
         <strong class="button">EN</strong> <a href="{{root}}es/" class="button">ES</a>
@@ -137,7 +145,6 @@
         </div>
       </div>
     </section>
-    
     <section class="grid-container hide-for-large" id="section-tabs">
       <div class="grid-x grid-padding-x">
         <div class="cell small-12 medium-6 p-b-3">
@@ -147,7 +154,7 @@
           </div>
           <picture data-aos="fade">
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
-            <img alt="{{tab1-image-alt}}"  src="{{root}}assets/img/DC2026-cherry_blossoms-sm.jpg">
+            <img alt="{{tab1-image-alt}}"  src="{{root}}assets/img/DC2026-Friendship_Archway-sm.jpg">
           </picture>
           <div class="m-t-2" data-aos="fade">{{#markdown}}{{tab1-content}}{{/markdown}}</div>
         </div>
@@ -158,7 +165,7 @@
           </div>
           <picture data-aos="fade">
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 960px)"> 
-            <img alt="{{tab2-image-alt}}" src="{{root}}assets/img/DC2026-July_4_fireworks-sm.jpg">
+            <img alt="{{tab2-image-alt}}" src="{{root}}assets/img/DC2026-Mary_J_Blige-sm.jpg">
           </picture>
           <div class="m-t-2" data-aos="fade">{{#markdown}}{{tab2-content}}{{/markdown}}</div>
         </div>
@@ -191,11 +198,11 @@
         <div id="tab-image-container" class="cell small-12 large-3">
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(max-width: 959px)"> 
-            <img alt="{{tab1-image-alt}}" data-tab-image-number="1" class="tab-image" src="{{root}}assets/img/DC2026-cherry_blossoms-lg.jpg" data-aos="fade-up">
+            <img alt="{{tab1-image-alt}}" data-tab-image-number="1" class="tab-image" src="{{root}}assets/img/DC2026-Friendship_Archway-lg.jpg" data-aos="fade-up">
           </picture>
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(max-width: 959px)"> 
-            <img alt="{{tab2-image-alt}}" data-tab-image-number="2" class="tab-image hide" src="{{root}}assets/img/DC2026-July_4_fireworks-lg.jpg" data-aos="fade-up">
+            <img alt="{{tab2-image-alt}}" data-tab-image-number="2" class="tab-image hide" src="{{root}}assets/img/DC2026-Mary_J_Blige-lg.jpg" data-aos="fade-up">
           </picture>
           <picture>
             <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(max-width: 959px)"> 
@@ -236,18 +243,23 @@
             <button class="button success large signup-opener" data-intent="volunteer"><span>{{volunteer-button}}</span></button>
           </div>
         </div>
-      </div>
-    </section>
+			</div>
+		</section>
     <div id="share-background" class="fluid" data-interchange="[{{root}}assets/img/DC2026-Share_Background-sm.png, small], [{{root}}assets/img/DC2026-Share_Background-sm.png, large]">
       <section class="grid-container p-t-6 p-b-8" id="section-share">
         <div class="grid-x grid-padding-x">
           <div id="post-container" class="cell small-12 medium-5 medium-offset-1 large-3 large-offset-2 show-for-large" data-aos="fade">
             <div class="post-example" id="post-facebook" data-post-channel="facebook">
               <div class="post-text-container">
-  <!--              <strong>{{social-facebook-title}}</strong>-->
                 {{#markdown}}{{social-facebook-paragraph-preview}}{{/markdown}}
               </div>
-              <img alt="{{social-facebook-img-alt}}" src="{{root}}assets/img/DC26_Share_Facebook.jpg">
+              <img alt="{{social-facebook-img-alt}}" src="{{root}}assets/img/DC2026-og-img.jpg">
+							<div class="og-content">
+								<p>
+									<strong>{{og-title}}</strong><br>
+									{{og-description}}
+								</p>
+							</div>
             </div>
             <div class="post-example hidden" id="post-twitter" data-post-channel="twitter">
               <div class="post-text-container">
@@ -274,7 +286,7 @@
                 {{#markdown}}{{social-linkedin-paragraph-preview}}{{/markdown}}
 								<p id="linkedin-text" class="hide">{{social-linkedin-paragraph}}</p>
               </div>
-              <img alt="{{social-linkedin-img-alt}}" src="{{root}}assets/img/DC26_Share_LinkedIn.jpg">
+              <img alt="{{social-linkedin-img-alt}}" src="{{root}}assets/img/DC2026-og-img.jpg">
             </div>
 <!--
             <div class="post-example hidden" id="post-messenger" data-post-channel="messenger">
@@ -300,7 +312,7 @@
               </div>
             </div>
           </div>
-          <div class="cell small-12 medium-6 medium-offset-1 large-4">
+          <div class="cell small-12 medium-8 medium-offset-1 large-5">
             <div class="grid-x">
               <div class="cell small-12" data-aos="fade">
                 <div class="header-group m-b-3">
@@ -314,9 +326,13 @@
 								<script>
 									document.getElementById('cta-facebook').onclick = function(e) {
 										FB.ui({
+											app_id: '223348358811580',
 											display: 'popup',
 											method: 'share',
-											href: 'http://staging.dc2026.org',
+											redirect_uri: 'https://dc2026.org',
+											href: 'https://dc2026.org',
+											quote: '{{social-facebook-paragraph}}',
+											hashtag: '#UnitedByTheGame',
 										}, function(response){});
 									}
 								</script>
@@ -325,7 +341,7 @@
 								
 <!--								<a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>-->
 								
-                <a href="http://www.linkedin.com/shareArticle?mini=true&url=staging.dc2026.org&title=Join%20me%20in%20the%20movement%20to%20secure%20DC%20as%20the%202026%20FIFA%20World%20Cup%20destination!%20Pledge%20your%20support%20to%20keep%20the%20momentum%20going%20here%20%3E%20dc2026.org%20%23DC2026" class="share-cta cta-linkedin" id="cta-linkedin" data-share-channel="linkedin"><i class="share-cta-icon fab fa-linkedin"></i>{{share-cta-linkedin}}</a>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=dc2026.org&title=Join%20me%20in%20the%20movement%20to%20secure%20DC%20as%20the%202026%20FIFA%20World%20Cup%20destination!%20Pledge%20your%20support%20to%20keep%20the%20momentum%20going%20here%20%3E%20dc2026.org%20%23DC2026" class="share-cta cta-linkedin" id="cta-linkedin" data-share-channel="linkedin"><i class="share-cta-icon fab fa-linkedin"></i>{{share-cta-linkedin}}</a>
               </div>
               <div class="cell small-6" data-aos="fade">
 								
@@ -407,10 +423,10 @@
 									</p>
 								</div>
 								<div class="cell small-12 large-3 large-offset-1 download">
-									<img alt="{{download-press-release-img-alt}}" src="https://placehold.it/350x450">
+									<img alt="{{download-press-release-img-alt}}" src="{{root}}assets/img/DC26_PressRelease_Image.png">
 									<h3 class="h4">{{download-press-release}}</h3>
 									<p>
-										<a href="#TODO" target="_blank">{{download-label}} PDF</a>
+										<a href="{{root}}assets/img/DC2026 Launch_PR_FINAL.pdf" target="_blank">{{download-label}} PDF</a>
 									</p>
 								</div>
 							</div>
@@ -427,22 +443,27 @@
           </div>
           <div class="cell small-12">
             <div class="grid-x grid-margin-x">
-              <div class="cell small-6 member-container" data-aos="fade">
+              <div class="cell small-6 large-4 member-container" data-aos="fade">
                 <p class="member-title-large">Co-Chair</p>
                 <p class="member-name-large">Max Brown</p>
                 <p class="member-org-large">Events DC</p>
               </div>
-              <div class="cell small-6 member-container" data-aos="fade">
+              <div class="cell small-6 large-4 member-container" data-aos="fade">
+                <p class="member-title-large">Co-Chair</p>
+                <p class="member-name-large">Bill Hamid</p>
+                <p class="member-org-large">D.C. United</p>
+              </div>
+							<div class="cell small-6 large-4 member-container" data-aos="fade">
                 <p class="member-title-large">Co-Chair</p>
                 <p class="member-name-large">Mark Ein</p>
                 <p class="member-org-large">Capitol Investment Corp.</p>
               </div>
-              <div class="cell small-6 member-container" data-aos="fade">
+              <div class="cell small-6 large-4 member-container" data-aos="fade">
                 <p class="member-title-large">Honorary Chair</p>
                 <p class="member-name-large">Gina Adams</p>
                 <p class="member-org-large">FedEx Corporation</p>
               </div>
-              <div class="cell small-6 member-container" data-aos="fade">
+              <div class="cell small-6 large-4 member-container" data-aos="fade">
                 <p class="member-title-large">Host Team</p>
                 <p class="member-name-large">Jason Levien</p>
                 <p class="member-org-large">D.C. United</p>
@@ -472,6 +493,10 @@
                 <p class="member-org">Prince George's County</p>
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
+                <p class="member-name">Steve Baldwin</p>
+                <p class="member-org">Washington Spirit</p>
+              </div>
+              <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Sashi Brown</p>
                 <p class="member-org">Monumental Sports &amp; Entertainment</p>
               </div>
@@ -490,10 +515,6 @@
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Ed	Foster-Simeon</p>
                 <p class="member-org">U.S. Soccer Foundation</p>
-              </div>
-              <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
-                <p class="member-name">Bill	Hamid</p>
-                <p class="member-org">D.C. United</p>
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Ximena Hartsock</p>
@@ -613,19 +634,16 @@
 				<div class="cell small-12 large-6" >
 					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-801-sm.png" alt="801 Shaw">
+						</div>
+						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-alexandria_soccer-sm.png" alt="Alexandria Soccer Association">
 						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-arlington_soccer-sm.png" alt="Arlington Soccer Association est 1970">
 						</div>
 						<div class="flex-child-auto m-b-2">
-							<img src="{{root}}assets/img/DC2026-partner-dc_united-sm.png" alt="D.C. United">
-						</div>
-						<div class="flex-child-auto m-b-2">
-							<img src="{{root}}assets/img/DC2026-partner-district_sports-sm.png" alt="District Sports">
-						</div>
-						<div class="flex-child-auto m-b-2">
-							<img src="{{root}}assets/img/DC2026-partner-maryland_soccerplex-sm.png" alt="Maryland SoccerPlex">
+							<img src="{{root}}assets/img/DC2026-partner-beach_fc-sm.png" alt="Beach FC — Virginia Beach, VA">
 						</div>
 					</div>
 				</div>
@@ -633,16 +651,80 @@
 				<div class="cell small-12 large-6">
 					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
-							<img src="{{root}}assets/img/DC2026-partner-potomac_soccer-sm.png" alt="Potomac Soccer Association">
+							<img src="{{root}}assets/img/DC2026-partner-club_champions_league-sm.png" alt="Club Champions League">
 						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-dc_brau-sm.png" alt="D.C. Brau">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-dc_fray-sm.png" alt="DC Fray">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-dc_scores-sm.png" alt="D.C. Scores">
+						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-6">
+					<div class="flex-container">
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-dc_united-sm.png" alt="D.C. United">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-district_sports-sm.png" alt="District Sports">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-fc_richmond-sm.png" alt="FC Richmond">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-golden_boot-sm.png" alt="Golden Boot">
+						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-6">
+					<div class="flex-container">
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-great_falls-sm.png" alt="Great Falls Reston">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-lee_mtvernon-sm.png" alt="Lee-Mt. Vernon Sports Club">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-mad_hatter-sm.png" alt="Mad Hatter">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-maryland_soccerplex-sm.png" alt="Maryland SoccerPlex">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-mclean-sm.png" alt="McLean">
+						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-6">
+					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-monumental-sm.png" alt="Monumental Sports and Entertainment">
 						</div>
 						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-potomac_soccer-sm.png" alt="Potomac Soccer Association">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-shaws_tavern-sm.png" alt="Shaw's Tavern">
+						</div>
+						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-shenandoah_valley_united-sm.png" alt="Shenandoah Valley United">
+						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-6">
+					<div class="flex-container">
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-team_dc-sm.png" alt="Team DC">
 						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-vbr_star-sm.png" alt="VBR Star 1986">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-wags-sm.png" alt="Women and Girls in Soccer">
 						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-washington_spirit-sm.png" alt="Washington Spirit">
@@ -650,13 +732,16 @@
 					</div>
 				</div>
 				
-				<div class="cell small-12 large-6 large-offset-3">
+				<div class="cell small-12 large-10 large-offset-1">
 					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
-							<img src="{{root}}assets/img/DC2026-partner-trinity_washington-sm.png" alt="Trinity Washington">
+							<img src="{{root}}assets/img/DC2026-partner-fedex_field-sm.png" alt="FedEx Field">
 						</div>
 						<div class="flex-child-auto m-b-2">
-							<img src="{{root}}assets/img/DC2026-partner-fedex_field-sm.png" alt="fedex_field" alt="FedEx Field">
+							<img src="{{root}}assets/img/DC2026-partner-audi_field-sm.png" alt="Audi Field">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-trinity_washington-sm.png" alt="Trinity Washington">
 						</div>
 					</div>
 				</div>
@@ -686,6 +771,7 @@
         </div>
       </div>
     </footer>
+		</main>
     
     <div class="reveal large reverse" id="modal" data-reveal data-overlay="true" data-animation-in="fade-in" data-animation-out="fade-out" data-events="resize"></div>
     
