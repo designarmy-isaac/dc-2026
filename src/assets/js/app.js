@@ -177,33 +177,33 @@ $('[data-reveal]').on('open.zf.reveal', function () {
         beforeSend: function() {
           $('#mc-embedded-subscribe').prop('disabled', true).val("Sending...");
         },        
-        success: function(response, status, xhr) {
-//					console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-//											'xhr.status = '+xhr.status+ '\n' +
-//											'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-//											'status = '+status+ '\n' +
-//											'response = '+response);
+        success: function(response, status, xhr) { 
+					console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+											'xhr.status = '+xhr.status+ '\n' +
+											'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+											'status = '+status+ '\n' +
+											'response = '+response);
           if(response == 200) {
-//						console.log("200");
+						console.log("200");
             $('#mc-embedded-subscribe-form').hide();
             $('#signup-header').hide();
             $('.signup-error').hide();
             $('.signup-success').show();
           } else {
-//						console.log("else");
+						console.log("else");
             $('.signup-error').show();
 						$('.error-paragraph').hide();
 						switch (response) {
 							case 0:
-//								console.log("switch case 0")
+								console.log("switch case 0")
 								$('#error-paragraph-connection').show();
 								break;
 							case 400:
-//								console.log("switch case 400")
+								console.log("switch case 400")
 								$('#error-paragraph-400').show();
 								break;
 							case 500:
-//								console.log("switch case 500")
+								console.log("switch case 500")
 								$('#error-paragraph-500').show();
 								break;
 							default:
@@ -212,11 +212,11 @@ $('[data-reveal]').on('open.zf.reveal', function () {
 					}
         },
         error: function(xhr, status, error) {
-//          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-//                      'xhr.status = '+xhr.status+ '\n' +
-//                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-//                      'status = '+status+ '\n' +
-//                      'error = '+error);
+          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+                      'xhr.status = '+xhr.status+ '\n' +
+                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+                      'status = '+status+ '\n' +
+                      'error = '+error);
           $('.signup-error').show();
 					$('.error-paragraph').hide();
 					$('#error-paragraph-connection').show();
@@ -242,11 +242,11 @@ $('[data-reveal]').on('open.zf.reveal', function () {
           $('#c-SUBMIT').prop('disabled', true).val("Sending...");
         },
         success: function(response, status, xhr) {
-//          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-//                      'xhr.status = '+xhr.status+ '\n' +
-//                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-//                      'status = '+status+ '\n' +
-//                      'response = '+response);
+          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+                      'xhr.status = '+xhr.status+ '\n' +
+                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+                      'status = '+status+ '\n' +
+                      'response = '+response);
 					if (response.indexOf('Message has been sent') >= 0 ) {
 						$('#c-form').hide();
 						$('#contact-header').hide();
@@ -257,11 +257,11 @@ $('[data-reveal]').on('open.zf.reveal', function () {
 					}
         },
         error: function(xhr, status, error) {
-//          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
-//                      'xhr.status = '+xhr.status+ '\n' +
-//                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
-//                      'status = '+status+ '\n' +
-//                      'error = '+error);
+          console.log('xhr.responseText = '+xhr.responseText+ '\n' +
+                      'xhr.status = '+xhr.status+ '\n' +
+                      'xhr.getAllResponseHeaders() = '+xhr.getAllResponseHeaders()+ '\n' +
+                      'status = '+status+ '\n' +
+                      'error = '+error);
           $('.contact-error').show();
         },
         complete: function() {

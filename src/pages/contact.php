@@ -20,19 +20,18 @@ try {
 		$mail->Port       	= <%-mailport-%>;
 		$mail->SMTPOptions	= <%-mailoptions-%>;
 	
-
     //Recipients
     $mail->setFrom('webform@dc2026.org', 'dc2026.org Webform');
     $mail->addAddress('dc2026@eventsdc.com');
 		$mail->addCC('isaac@designarmy.com');
+		$mail->addCC('dc2026contactform@gmail.com');
     $mail->addReplyTo($email);
 
 
     // Content
     $mail->isHTML(false);
     $mail->Subject = 'DC2026 Contact Form Submission Attn: ' . $subject;
-    $mail->Body    = 'New Form Submission' . PHP_EOL . PHP_EOL .
-                     'Email: ' . $email . '' . PHP_EOL .
+    $mail->Body    = 'Email: ' . $email . '' . PHP_EOL .
                      'Interested In: ' . $subject . '' . PHP_EOL .
                      'Message: ' . $body . '' . PHP_EOL;
 

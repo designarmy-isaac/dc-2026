@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="{{lang}}">   
-  <head>
+  <head> 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -42,7 +42,7 @@
     <meta name="twitter:creator" content="@dc2026">
     <meta name="twitter:title" content="{{meta-title}}">
     <meta name="twitter:description" content="{{og-description}}">
-    <meta name="twitter:image" content="https://dc2026.org/assets/img/DC26_Share_Twitter.jpg">
+    <meta name="twitter:image" content="https://dc2026.org/assets/img/DC2026-Share_Twitter{{#ifequal lang 'es'}}_ES{{/ifequal}}.jpg">
     
 		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -264,13 +264,13 @@
             <div class="post-example hidden" id="post-twitter" data-post-channel="twitter">
               <div class="post-text-container">
                 {{#markdown}}{{social-twitter-paragraph-preview}}{{/markdown}}
-								<p id="twitter-text" class="hide">{{social-linkedin-paragraph}}</p>
+								<p id="twitter-text" class="hide">{{social-twitter-paragraph}}</p>
               </div>
-              <img alt="{{social-twitter-img-alt}}" src="{{root}}assets/img/DC26_Share_Twitter.jpg">
+              <img alt="{{social-twitter-img-alt}}" src="{{root}}assets/img/DC2026-Share_Twitter.jpg">
             </div>
 <!--
             <div class="post-example hidden" id="post-instagram" data-post-channel="instagram">
-              <img alt="{{social-instagram-img-alt}}" src="{{root}}assets/img/DC26_Share_Instagram.jpg">
+              <img alt="{{social-instagram-img-alt}}" src="{{root}}assets/img/DC2026-Share_Instagram.jpg">
               <div class="post-text-container">
                 {{#markdown}}{{social-instagram-paragraph-preview}}{{/markdown}}
               </div>
@@ -337,7 +337,7 @@
 									}
 								</script>
 								
-                <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fdc2026.org%2F&ref_src=twsrc%5Etfw&related=DC2026&text=Join%20me%20in%20the%20movement%20to%20secure%20DC%20as%20the%202026%20%40FIFAWorldCup%20destination!%20Pledge%20your%20support%20to%20keep%20the%20momentum%20going%20here%20%3E%20dc2026.org%20%23DC2026&tw_p=tweetbutton" class="share-cta cta-twitter" id="cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
+                <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fdc2026.org%2F&ref_src=twsrc%5Etfw&related=DC2026&text=Join%20me%20and%20pledge%20your%20support%20to%20make%20Washington%2C%20DC%20a%202026%20FIFA%20World%20Cup%20destination!%20We%20are%20%23UnitedByTheGame%20dc2026.org%2F%20%23DC2026&tw_p=tweetbutton" class="share-cta cta-twitter" id="cta-twitter" data-share-channel="twitter"><i class="share-cta-icon fab fa-twitter"></i>{{share-cta-twitter}}</a><br>
 								
 <!--								<a href="#" class="share-cta" id="cta-instagram" data-share-channel="instagram"><i class="share-cta-icon fab fa-instagram"></i>{{share-cta-instagram}}</a><br>-->
 								
@@ -408,22 +408,22 @@
 					<div class="cell small-6 medium-offset-1 large-10" data-aos="fade">
 							<div class="grid-x grid-margin-x">
 								<div class="cell small-12 large-3 download">
-									<img alt="{{download-logo-img-alt}}" src="{{root}}assets/img/DC26_Logo_Image.jpg">
+									<img alt="{{download-logo-img-alt}}" src="{{root}}assets/img/DC2026_Logo_Image.jpg">
 									<h3 class="h4">{{download-logo}}</h3>
 									<p>
-										<a href="{{root}}assets/img/DC26_Logos_png.zip" target="_blank">{{download-label}} .png</a><br>
-										<a href="{{root}}assets/img/DC26_Logos_eps.zip" target="_blank">{{download-label}} .eps</a>
+										<a href="{{root}}assets/img/DC2026_Logos_png.zip" target="_blank">{{download-label}} .png</a><br>
+										<a href="{{root}}assets/img/DC2026_Logos_eps.zip" target="_blank">{{download-label}} .eps</a>
 									</p>
 								</div>
 								<div class="cell small-12 large-3 large-offset-1 download">
-									<img alt="{{download-fact-sheet-img-alt}}" src="{{root}}assets/img/DC26_FactSheet_Image.jpg">
+									<img alt="{{download-fact-sheet-img-alt}}" src="{{root}}assets/img/DC2026_FactSheet{{#ifequal lang 'es'}}_ES{{/ifequal}}_Image.jpg">
 									<h3 class="h4">{{download-fact-sheet}}</h3>
 									<p>
-										<a href="{{root}}assets/img/DC26_FactSheet.pdf" target="_blank">{{download-label}} PDF</a>
+										<a href="{{root}}assets/img/DC2026_FactSheet{{#ifequal lang 'es'}}_ES{{/ifequal}}.pdf" target="_blank">{{download-label}} PDF</a>
 									</p>
 								</div>
 								<div class="cell small-12 large-3 large-offset-1 download">
-									<img alt="{{download-press-release-img-alt}}" src="{{root}}assets/img/DC26_PressRelease_Image.png">
+									<img alt="{{download-press-release-img-alt}}" src="{{root}}assets/img/DC2026_PressRelease{{#ifequal lang 'es'}}_ES{{/ifequal}}_Image.png">
 									<h3 class="h4">{{download-press-release}}</h3>
 									<p>
 										<a href="{{root}}assets/img/DC2026 Launch_PR_FINAL.pdf" target="_blank">{{download-label}} PDF</a>
@@ -511,10 +511,6 @@
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">John	Falcicchio</p>
                 <p class="member-org">Office of the Deputy Mayor for Planning and Economic Development</p>
-              </div>
-              <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
-                <p class="member-name">Ed	Foster-Simeon</p>
-                <p class="member-org">U.S. Soccer Foundation</p>
               </div>
               <div class="cell small-4 medium-3 large-2 member-container" data-aos="fade">
                 <p class="member-name">Ximena Hartsock</p>
@@ -631,7 +627,7 @@
       </div>
       <div class="grid-x m-b-6 partner-logos" data-aos="fade">
 				
-				<div class="cell small-12 large-6" >
+				<div class="cell small-12 large-5 large-offset-1" >
 					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-801-sm.png" alt="801 Shaw">
@@ -647,8 +643,7 @@
 						</div>
 					</div>
 				</div>
-				
-				<div class="cell small-12 large-6">
+				<div class="cell small-12 large-5">
 					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-club_champions_league-sm.png" alt="Club Champions League">
@@ -664,7 +659,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="cell small-12 large-6">
+				<div class="cell small-12 large-5 large-offset-1">
 					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-dc_united-sm.png" alt="D.C. United">
@@ -673,20 +668,36 @@
 							<img src="{{root}}assets/img/DC2026-partner-district_sports-sm.png" alt="District Sports">
 						</div>
 						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-edp-sm.png" alt="EDP">
+						</div>
+						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-fc_richmond-sm.png" alt="FC Richmond">
+						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-5">
+					<div class="flex-container">
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-four_courts-sm.png" alt="Ireland’s Four Courts">
 						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-golden_boot-sm.png" alt="Golden Boot">
 						</div>
-					</div>
-				</div>
-				<div class="cell small-12 large-6">
-					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-great_falls-sm.png" alt="Great Falls Reston">
 						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-lee_mtvernon-sm.png" alt="Lee-Mt. Vernon Sports Club">
+						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-5 large-offset-1">
+					<div class="flex-container">
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-loudon_soccer-sm.png" alt="Loudon Soccer">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-loudon_united-sm.png" alt="Loudon United">
 						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-mad_hatter-sm.png" alt="Mad Hatter">
@@ -694,13 +705,13 @@
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-maryland_soccerplex-sm.png" alt="Maryland SoccerPlex">
 						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-5">
+					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-mclean-sm.png" alt="McLean">
 						</div>
-					</div>
-				</div>
-				<div class="cell small-12 large-6">
-					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-monumental-sm.png" alt="Monumental Sports and Entertainment">
 						</div>
@@ -710,21 +721,34 @@
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-shaws_tavern-sm.png" alt="Shaw's Tavern">
 						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-5 large-offset-1">
+					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-shenandoah_valley_united-sm.png" alt="Shenandoah Valley United">
 						</div>
-					</div>
-				</div>
-				<div class="cell small-12 large-6">
-					<div class="flex-container">
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-stoddert-sm.png" alt="Washington DC Stoddert Soccer">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-sya-sm.png" alt="Southwestern Youth Association">
+						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-team_dc-sm.png" alt="Team DC">
 						</div>
+					</div>
+				</div>
+				<div class="cell small-12 large-5">
+					<div class="flex-container">
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-vbr_star-sm.png" alt="VBR Star 1986">
 						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-wags-sm.png" alt="Women and Girls in Soccer">
+						</div>
+						<div class="flex-child-auto m-b-2">
+							<img src="{{root}}assets/img/DC2026-partner-capital-sm.png" alt="Washington Capital Utd.">
 						</div>
 						<div class="flex-child-auto m-b-2">
 							<img src="{{root}}assets/img/DC2026-partner-washington_spirit-sm.png" alt="Washington Spirit">
