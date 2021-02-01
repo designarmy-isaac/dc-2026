@@ -413,7 +413,12 @@
 					<div class="cell small-6 medium-offset-1 large-12 large-offset-0" data-aos="fade">
 							<div class="grid-x grid-margin-x">
 								<div class="cell small-12 large-3 download">
-									<img alt="{{download-logo-img-alt}}" src="{{root}}assets/img/DC2026_Logo_Image.jpg">
+                  {{#ifequal lang "en"}}
+                  <img src="{{root}}assets/img/DC2026_Logo_EN_Image.jpg" alt="{{download-logo-img-alt}}">
+                  {{/ifequal}}
+                  {{#ifequal lang "es"}}
+                    <img src="{{root}}assets/img/DC2026_Logo_ES_Image.jpg" alt="{{download-logo-img-alt}}">
+                  {{/ifequal}}
 									<h3 class="h4">{{download-logo}}</h3>
 									<p>
 										<a href="{{root}}assets/img/DC2026_Logos_png.zip" target="_blank">{{download-label}} .png</a><br>
@@ -643,11 +648,11 @@
           <div id="youth-board-graphics">
             <picture>
               <source srcset="{{root}}assets/img/DC2026-Bill_Hamid_silhouette-md.png" media="(min-width: 960px)">
-              <img src="{{root}}assets/img/DC2026-Bill_Hamid_silhouette-sm.png" alt="" id="youth-board-graphic-silhouette" data-aos="fade-right">
+              <img src="{{root}}assets/img/DC2026-Bill_Hamid_silhouette-sm.png" alt="" id="youth-board-graphic-silhouette" data-aos="fade-left">
             </picture>
             <picture>
               <source srcset="{{root}}assets/img/DC2026-Bill_Hamid-md.png" media="(min-width: 960px)">
-              <img src="{{root}}assets/img/DC2026-Bill_Hamid-sm.png" alt="{{ board-athlete-image-alt }}" id="youth-board-graphic-athlete" data-aos="fade-right" data-aos-delay="200">
+              <img src="{{root}}assets/img/DC2026-Bill_Hamid-sm.png" alt="{{ board-athlete-image-alt }}" id="youth-board-graphic-athlete" data-aos="fade-left" data-aos-delay="200">
             </picture>
             <!-- <div id="board-graphic-caption" class="show-for-large" data-aos="fade-right" data-aos-duration="400">
               <p class="caption"><strong>{{ board-athlete-name }}</strong><br>{{ board-athlete-title }}</p>
