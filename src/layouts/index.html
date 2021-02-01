@@ -101,7 +101,12 @@
     <section id="section-hero" class="grid-container">
       <div id="logo-container">
         <h1 id="logo-text">DC26<br>World Cup<br>United States | Canada | Mexico</h1>
-        <img src="{{root}}assets/img/DC2026-Logo-sm.png" alt="DC26 World Cup United States | Canada | Mexico" id="logo" data-aos="fade-right">
+        {{#ifequal lang "en"}}
+          <img src="{{root}}assets/img/DC2026-En_Vertical_On-Screen_RGB_Large.png" alt="DC26 World Cup | FIFA World Cup 2026 Candidate Host City" id="logo" data-aos="fade-right">
+        {{/ifequal}}
+        {{#ifequal lang "es"}}
+          <img src="{{root}}assets/img/DC2026-Es_Vertical_On-Screen_RGB_Large.png" alt="DC26 World Cup | FIFA World Cup 2026 Candidate Host City" id="logo" data-aos="fade-right">
+        {{/ifequal}}
       </div>
       <div id="hero-graphics">
         <picture>
@@ -623,6 +628,30 @@
                 <p class="member-name">Mark Weinberger</p>
                 <p class="member-org">Ernst &amp; Young LLP</p>
               </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="section-youth-board" class="p-b-6">
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="cell small-7 medium-5 m-b-1">
+            <h2 class="h1 m-b-3" data-aos="fade">{{youth-board-header}}</h2>
+            <p data-aos="fade">{{youth-board-paragraph}}</p>
+            <a class="button large" href="{{youth-board-link}}" target="_blank"><span>{{youth-board-button}}</span></a>
+          </div>
+          <div id="youth-board-graphics">
+            <picture>
+              <source srcset="{{root}}assets/img/DC2026-Bill_Hamid_silhouette-md.png" media="(min-width: 960px)">
+              <img src="{{root}}assets/img/DC2026-Bill_Hamid_silhouette-sm.png" alt="" id="youth-board-graphic-silhouette" data-aos="fade-right">
+            </picture>
+            <picture>
+              <source srcset="{{root}}assets/img/DC2026-Bill_Hamid-md.png" media="(min-width: 960px)">
+              <img src="{{root}}assets/img/DC2026-Bill_Hamid-sm.png" alt="{{ board-athlete-image-alt }}" id="youth-board-graphic-athlete" data-aos="fade-right" data-aos-delay="200">
+            </picture>
+            <!-- <div id="board-graphic-caption" class="show-for-large" data-aos="fade-right" data-aos-duration="400">
+              <p class="caption"><strong>{{ board-athlete-name }}</strong><br>{{ board-athlete-title }}</p>
+            </div> -->
             </div>
           </div>
         </div>
